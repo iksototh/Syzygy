@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace GrandLine.Ships
 {
@@ -38,24 +37,25 @@ namespace GrandLine.Ships
                 Game.Overlay.Clear();
                 var end = Game.WorldMap.WorldToCell(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
                 GetPath(end);
-                
-                
-                //Debug.Log(_path.FirstOrDefault());
-                //Debug.Log(Game.WorldMap.WorldToCell(_rigidbody2D.position));
-                //_pathfinder.SetTarget(end, MaxMovementInWar);
-                //_pathfinder.SetTarget(end);
-                //paths = _pathfinder.CalculatePath(start, end);
-                //moveTowards = end; // _pathfinder.GetTarget();
-                // moving = true;
             }
         }
 
         void GetPath(Vector3Int end)
         {
-            _path = _pathFinder.CalculatePath(end);
-            Debug.Log($"Path {_path == null}");
-            if (_path == null) return;
+            var newPath = _pathFinder.CalculatePath(end);
 
+            
+            Debug.Log($"Path {_path == null}");
+            if (newPath == null) 
+            { 
+                if(_path != null && _path.Count > 0)
+                {
+                    _path = new List<PathTile>() { _path[0] };
+                }
+                return; 
+            }
+
+            _path = newPath;
             var moveTowards = _path.FirstOrDefault();
             if (moveTowards != null)
             {
@@ -66,8 +66,6 @@ namespace GrandLine.Ships
         public void OnDrawGizmos()
         {
             if (_path == null) { return; }
-            
-            // Game.Overlay.Clear();
 
             foreach (var path in _path) 
             {
