@@ -86,7 +86,7 @@ namespace GrandLine.Ships
             var target = GetDirection();
             if (target == null) return;
 
-            _rigidbody2D.velocity = target.Value * 1f;
+            _rigidbody2D.velocity = target.Value * 2f;
         }
 
         Vector2 direction = new Vector2(0, 0);

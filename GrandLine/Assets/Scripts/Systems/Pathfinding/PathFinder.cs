@@ -58,12 +58,11 @@ namespace GrandLine
 
             void AddPathPart(PathTile pathPart, PathTile parent)
             {
-                if ((IsBlockedCell(pathPart) && !Game.WorldMap.IsTown(new Vector3Int(pathPart.X, pathPart.Y))) || openList.Contains(pathPart) || closedList.Contains(pathPart))
+                if ((IsBlockedCell(pathPart) && !Game.WorldMap.IsTown(pathPart.ToVector3Int()) || openList.Contains(pathPart) || closedList.Contains(pathPart)))
                 {
-                    Debug.Log($"Blcoked {pathPart}");
                     return;
                 }
-                Game.Overlay.DrawBlueTile(pathPart.ToVector3Int());
+                // Game.Overlay.DrawBlueTile(pathPart.ToVector3Int());
 
                 pathPart.Parent = parent;
                 pathPart.Score = ManhattanScore(new Vector3Int(pathPart.X, pathPart.Y), new Vector3Int(target.X, target.Y));
@@ -96,10 +95,22 @@ namespace GrandLine
                 AddPathPart(south, startingCell);
                 AddPathPart(west, startingCell);
 
-                //AddPathPart(northEast, startingCell);
-                //AddPathPart(southEast, startingCell);
-                //AddPathPart(southWest, startingCell);
-                //AddPathPart(northWest, startingCell);
+                if (!IsBlockedCell(east) && !IsBlockedCell(north))
+                {
+                    AddPathPart(northEast, startingCell);
+                }
+                if (!IsBlockedCell(east) && !IsBlockedCell(south))
+                {
+                    AddPathPart(southEast, startingCell);
+                }
+                if (!IsBlockedCell(west) && !IsBlockedCell(south))
+                {
+                    AddPathPart(southWest, startingCell);
+                }
+                if (!IsBlockedCell(west) && !IsBlockedCell(north))
+                {
+                    AddPathPart(northWest, startingCell);
+                }
             }
 
             if (calculatedPaths >= 1000)
