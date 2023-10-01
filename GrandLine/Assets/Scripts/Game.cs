@@ -1,30 +1,14 @@
-using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using GrandLine.Core.Enums;
+using GrandLine.World;
+using GrandLine.Overlays;
 
-public class Game : MonoBehaviour
+namespace GrandLine
 {
-    public GameObject Player;
-
-    void Awake()
+    internal static class Game
     {
-        var player = Instantiate(Player, new Vector3Int(-2, 1), Quaternion.identity);
-        var playerCamera = GameObject.FindGameObjectWithTag("PlayerCamera");
-        var cinematicScript = playerCamera.GetComponent<CinemachineVirtualCamera>();
-        cinematicScript.Follow = player.transform;
-        cinematicScript.LookAt = player.transform;
-    }
+        public static IMap WorldMap;
+        public static IOverlay Overlay;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public static GameStates GameState;
     }
 }

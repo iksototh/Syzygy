@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 106295843}
   m_Layer: 0
   m_Name: Towns
-  m_TagString: Untagged
+  m_TagString: Town
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -683,7 +683,6 @@ GameObject:
   m_Component:
   - component: {fileID: 564902791}
   - component: {fileID: 564902793}
-  - component: {fileID: 564902792}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -706,19 +705,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &564902792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 564902790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b831225d14938534ca64f7df0bff8704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 4483961572045142375, guid: e05d4a62e609b674b83f696637a8ad86, type: 3}
 --- !u!114 &564902793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,6 +717,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f906ee3006e759e4e8965e2b59fbfb89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WorldGrid: {fileID: 1741857216}
+  OverlayMap: {fileID: 792782564}
+  Player: {fileID: 4483961572045142375, guid: e05d4a62e609b674b83f696637a8ad86, type: 3}
+  OverlayGreenTile: {fileID: 11400000, guid: 21a6445cd2510744583b6291e8a52355, type: 2}
+  OverlayRedTile: {fileID: 11400000, guid: 2827781d8fa76b742935425724369c1c, type: 2}
+  OverlayYellowTile: {fileID: 11400000, guid: 6bd992cf21d9e9647a8509176063c21a, type: 2}
+  OverlayBlueTile: {fileID: 11400000, guid: 03fe481d15ded964985694b3146db03f, type: 2}
+  OverlayBlackTile: {fileID: 11400000, guid: 90350794e5a38534a8ddf1ba74712e64, type: 2}
+  OverlayWhiteTile: {fileID: 11400000, guid: b685f722165e8654eb1c84d033a89d06, type: 2}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,7 +821,7 @@ GameObject:
   - component: {fileID: 792782563}
   m_Layer: 0
   m_Name: Overlay
-  m_TagString: Untagged
+  m_TagString: Overlay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1011,7 +1006,7 @@ GameObject:
   - component: {fileID: 1381599343}
   m_Layer: 0
   m_Name: Land
-  m_TagString: Untagged
+  m_TagString: Collision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13951,7 +13946,7 @@ GameObject:
   - component: {fileID: 1741857215}
   - component: {fileID: 1741857216}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: WorldGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13993,7 +13988,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 619394802}
-  - {fileID: 943599151}
-  - {fileID: 564902791}
   - {fileID: 281081947}
+  - {fileID: 619394802}
+  - {fileID: 564902791}
+  - {fileID: 943599151}
