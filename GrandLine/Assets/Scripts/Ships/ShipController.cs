@@ -13,12 +13,21 @@ namespace GrandLine.Ships
             _mainCamera = Camera.main;
         }
 
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Debug.Log("Trigger");
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            Debug.Log("Colliusion");
+        }
+
         // Update is called once per frame
         void Update()
         {
             if (Input.GetMouseButtonUp(0))
             {
-                Game.Overlay.Clear();
                 var end = Game.WorldMap.WorldToCell(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
                 _shipMovementController.TravelTo(end);
             }

@@ -30,6 +30,7 @@ namespace GrandLine
             Game.WorldMap = new WorldMap(WorldGrid);
 
             var overlay = new Overlay(OverlayMap);
+            overlay.Clear();
             overlay.SetTile(OverlayRedTile, TileOverlays.Red);
             overlay.SetTile(OverlayGreenTile, TileOverlays.Green);
             overlay.SetTile(OverlayBlackTile, TileOverlays.Black);
