@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace GrandLine.World
@@ -10,5 +11,6 @@ namespace GrandLine.World
 
         public bool IsTown(Vector3 worldPosition);
         public bool IsTown(Vector3Int cell);
+        public List<ITile> GetAllTowns();
     }
 }

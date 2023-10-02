@@ -6,10 +6,21 @@ namespace GrandLine.Ships
     {
         private ShipMovementController _shipMovementController;
         private Camera _mainCamera;
+        private void OnPathComplete()
+        {
+            Debug.Log("Complete");
+        }
+
+        private void OnPathFailed()
+        {
+            Debug.Log("Failed");
+        }
 
         private void Awake()
         {
             _shipMovementController = GetComponent<ShipMovementController>();
+            _shipMovementController.OnPathComplete = OnPathComplete;
+            _shipMovementController.OnPathFailed = OnPathFailed;
             _mainCamera = Camera.main;
         }
 

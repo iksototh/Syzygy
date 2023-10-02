@@ -9,7 +9,7 @@ namespace GrandLine.World
     class WorldMap : IMap
     {
         private Grid _worldGrid;
-        private List<ITile> Towns;
+        private List<ITile> _towns;
 
         public WorldMap(Grid worldGrid)
         {
@@ -30,7 +30,12 @@ namespace GrandLine.World
 
         public bool IsTown(Vector3Int cell)
         {
-            return Towns.Any(town => town.X == cell.x && town.Y == cell.y);
+            return _towns.Any(town => town.X == cell.x && town.Y == cell.y);
+        }
+
+        public List<ITile> GetAllTowns()
+        {
+            return _towns;
         }
 
         public Tilemap CollisionMap { get { return GetCollisionTilemap(); } }
@@ -57,7 +62,7 @@ namespace GrandLine.World
                 towns.Add(new TownTile() { X = townPosition.x, Y = townPosition.y });
             }
 
-            Towns = towns;
+            _towns = towns;
         }
     }
 }

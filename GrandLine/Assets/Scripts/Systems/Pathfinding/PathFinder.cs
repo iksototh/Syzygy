@@ -9,16 +9,6 @@ namespace GrandLine
     {
         const int MAX_CALCULATED_PATHS = 10000;
 
-        public Action OnPathComplete;
-        public Action OnPathFailed;
-
-        private Rigidbody2D _rigidbody2D;
-
-        public PathFinder(Rigidbody2D rigidbody2D)
-        {
-            _rigidbody2D = rigidbody2D;
-        }
-
         int ManhattanScore(Vector3Int position, Vector3Int target)
         {
             return Math.Abs(position.x - target.x) + Math.Abs(position.y - target.y);
@@ -39,9 +29,9 @@ namespace GrandLine
             return IsBlockedCell(pathTile.X, pathTile.Y);
         }
 
-        internal List<PathTile> CalculatePath(Vector3Int targetPosition)
+        internal List<PathTile> CalculatePath(Vector2 position, Vector3Int targetPosition)
         {
-            var startPosition = GetCell(_rigidbody2D.position);
+            var startPosition = GetCell(position);
             var target = new PathTile(0, targetPosition.x, targetPosition.y);
             if (IsBlockedCell(target))
             {
@@ -109,7 +99,7 @@ namespace GrandLine
                 }
             }
 
-            if (calculatedPaths >= 1000)
+            if (calculatedPaths >= MAX_CALCULATED_PATHS - 1)
             {
                 Debug.Log("Failed to find a path");
 

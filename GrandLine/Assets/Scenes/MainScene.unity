@@ -785,6 +785,7 @@ MonoBehaviour:
   WorldGrid: {fileID: 1741857216}
   OverlayMap: {fileID: 792782564}
   Player: {fileID: 4483961572045142375, guid: e05d4a62e609b674b83f696637a8ad86, type: 3}
+  Enemy: {fileID: 2506797801968826060, guid: 43c211f5fa161234c8a6cebe8e15f529, type: 3}
   OverlayGreenTile: {fileID: 11400000, guid: 21a6445cd2510744583b6291e8a52355, type: 2}
   OverlayRedTile: {fileID: 11400000, guid: 2827781d8fa76b742935425724369c1c, type: 2}
   OverlayYellowTile: {fileID: 11400000, guid: 6bd992cf21d9e9647a8509176063c21a, type: 2}

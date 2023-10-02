@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,6 +7,9 @@ namespace GrandLine
 {
     public class ShipMovementController : MonoBehaviour
     {
+        public Action OnPathComplete;
+        public Action OnPathFailed;
+
         private PathFinder _pathFinder;
         private Rigidbody2D _rigidbody2D;
         private Vector3Int _moveTowards;
@@ -16,11 +19,11 @@ namespace GrandLine
         private void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            _pathFinder = new PathFinder(_rigidbody2D);
+            _pathFinder = new PathFinder();
         }
         public void TravelTo(Vector3Int end)
         {
-            var newPath = _pathFinder.CalculatePath(end);
+            var newPath = _pathFinder.CalculatePath(_rigidbody2D.position, end);
 
             if (newPath == null)
             {
@@ -28,6 +31,7 @@ namespace GrandLine
                 {
                     _path = new List<PathTile>() { _path[0] };
                 }
+                OnPathFailed();
                 return;
             }
 
@@ -71,6 +75,10 @@ namespace GrandLine
             if (towards.ToVector3Int() == cell)
             {
                 _path.RemoveAt(0);
+                if(_path.Count == 0)
+                {
+                    OnPathComplete();
+                }
             }
 
             return _direction;
