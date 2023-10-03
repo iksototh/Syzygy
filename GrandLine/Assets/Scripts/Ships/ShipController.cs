@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace GrandLine.Ships
 {
@@ -9,6 +10,7 @@ namespace GrandLine.Ships
         private void OnPathComplete()
         {
             Debug.Log("Complete");
+            // SceneManager.LoadScene("Town");
         }
 
         private void OnPathFailed()
