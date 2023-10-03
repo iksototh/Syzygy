@@ -31,7 +31,6 @@ namespace GrandLine
 
         private void OnPauseOrResume()
         {
-            Debug.Log($"Pause and resume {Game.IsPaused}");
             if(IsPaused)
             {
                 PauseMenuCanvas.gameObject.SetActive(false);
