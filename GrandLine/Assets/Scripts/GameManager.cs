@@ -1,13 +1,14 @@
 using Cinemachine;
 using GrandLine.Core.Enums;
 using GrandLine.Overlays;
+using GrandLine.Systems.Savegame;
 using GrandLine.World;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace GrandLine
 {
-    public class Bootstrap : MonoBehaviour
+    public class GameManager : MonoBehaviour
     {
         public Grid WorldGrid;
         public Tilemap OverlayMap;
@@ -61,6 +62,9 @@ namespace GrandLine
             index = new System.Random().Next(townCount);
             town = towns[index];
             Instantiate(Enemy, new Vector3(town.X + 0.5f, town.Y + 0.5f), Quaternion.identity);
+
+            var savegameManager = new SavegameManager();
+            Game.SavegameManager = savegameManager;
         }
     }
 }

@@ -1,9 +1,10 @@
+using GrandLine.Systems.Savegame;
+using Unity.Serialization.Json;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace GrandLine.Ships
 {
-    public class ShipController : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         private ShipMovementController _shipMovementController;
         private Camera _mainCamera;
@@ -26,6 +27,11 @@ namespace GrandLine.Ships
             _mainCamera = Camera.main;
         }
 
+        private void Start()
+        {
+            Game.SavegameManager.AddSaveable(OnSave);
+        }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             Debug.Log("Trigger");
@@ -45,5 +51,23 @@ namespace GrandLine.Ships
                 _shipMovementController.TravelTo(end);
             }
         }
+
+        private void OnLoad(SaveState saveState)
+        {
+            Debug.Log("Load");
+        }
+
+        private SaveState OnSave()
+        {
+            var state = new SaveState
+            {
+                Id = "player",
+                Type = Core.Enums.SaveableTypes.Player,
+                State = _shipMovementController.GetNavigationData()
+            };
+
+            return state;
+        }
     }
+
 }

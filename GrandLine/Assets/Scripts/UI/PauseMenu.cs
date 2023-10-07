@@ -9,6 +9,9 @@ namespace GrandLine
     {
         public Button ResumeBtn;
         public Button QuitBtn;
+        public Button SaveBtn;
+        public Button LoadBtn;
+
         public Canvas PauseMenuCanvas;
 
         bool IsPaused = false;
@@ -20,16 +23,18 @@ namespace GrandLine
 
         void Start()
         {
-            ResumeBtn.onClick.AddListener(OnPauseOrResume);
-            QuitBtn.onClick.AddListener(OnQuit);
+            ResumeBtn.onClick.AddListener(OnPauseOrResumeHandler);
+            QuitBtn.onClick.AddListener(OnQuitHandler);
+            SaveBtn.onClick.AddListener(OnSaveHandler);
+            LoadBtn.onClick.AddListener(OnLoadHandler); 
         }
 
-        private void OnQuit()
+        private void OnQuitHandler()
         {
             SceneManager.LoadScene("Bootstrap");
         }
 
-        private void OnPauseOrResume()
+        private void OnPauseOrResumeHandler()
         {
             if(IsPaused)
             {
@@ -45,12 +50,22 @@ namespace GrandLine
             }
         }
 
+        private void OnSaveHandler()
+        {
+            Game.SavegameManager.OnSave();
+        }
+
+        private void OnLoadHandler()
+        {
+            Game.SavegameManager.OnLoad();
+        }
+
         // Update is called once per frame
         void Update()
         {
             if(Keyboard.current?.escapeKey.wasReleasedThisFrame == true)
             {
-                OnPauseOrResume();
+                OnPauseOrResumeHandler();
             }
         }
     }

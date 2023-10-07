@@ -1,3 +1,4 @@
+using GrandLine.Systems.Savegame;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,15 @@ namespace GrandLine
             {
                 _moveTowards = moveTowards.ToVector3Int();
             }
+        }
+
+        public NavigationData GetNavigationData()
+        {
+            return new NavigationData
+            {
+                TravelTo = _moveTowards,
+                CurrentPosition = Game.WorldMap.WorldToCell(_rigidbody2D.position)
+            };
         }
 
         private void LateUpdate()
