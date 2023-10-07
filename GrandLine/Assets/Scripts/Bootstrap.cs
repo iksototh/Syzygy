@@ -52,6 +52,12 @@ namespace GrandLine
             Game.Overlay = overlay;
 
 
+            //for(var i = 0; i < 1000; i++)
+            //{
+            //    index = new System.Random().Next(townCount);
+            //    town = towns[index];
+            //    Instantiate(Enemy, new Vector3(town.X + 0.5f, town.Y + 0.5f), Quaternion.identity);
+            //}
             index = new System.Random().Next(townCount);
             town = towns[index];
             Instantiate(Enemy, new Vector3(town.X + 0.5f, town.Y + 0.5f), Quaternion.identity);

@@ -45,13 +45,13 @@ namespace GrandLine
 
         void OnPathComplete()
         {
-            Debug.Log("Target reached");
+            // Debug.Log("Target reached");
             _shipMovementController.TravelTo(GetNextTarget());
         }
 
         void OnPathFailed()
         {
-            Debug.Log("Target failed");
+            // Debug.Log("Target failed");
             _shipMovementController.TravelTo(GetNextTarget());
         }
 
