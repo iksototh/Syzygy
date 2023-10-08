@@ -15,7 +15,7 @@ namespace GrandLine.Systems.Savegame
             SavablesFuncs = new List<Func<ShipState>>();
         }
 
-        public void OnSave()
+        public void Save(string fileName = "savefile.save")
         {
             var shipStates = new List<ShipState>();
             foreach (var func in SavablesFuncs)
@@ -28,14 +28,14 @@ namespace GrandLine.Systems.Savegame
             {
                 ships = shipStates
             };
-            var file = Path.Combine(Application.persistentDataPath, "savefile.save");
+            var file = Path.Combine(Application.persistentDataPath, fileName);
 
             File.WriteAllText(file, JsonSerialization.ToJson(gameState));
         }
 
-        public void OnLoad()
+        public void Load(string fileName = "savefile.save")
         {
-            var file = Path.Combine(Application.persistentDataPath, "savefile.save");
+            var file = Path.Combine(Application.persistentDataPath, fileName);
             var saveData = File.ReadAllText(file);
             var gameState = JsonSerialization.FromJson<GameState>(saveData);
 

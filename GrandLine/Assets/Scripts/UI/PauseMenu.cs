@@ -14,15 +14,13 @@ namespace GrandLine
 
         public Canvas PauseMenuCanvas;
 
-        bool IsPaused = false;
-
-        private void Awake()
-        {
-            PauseMenuCanvas.gameObject.SetActive(false);
-        }
-
         void Start()
         {
+            if (!Game.SceneData.IsPaused)
+            {
+                PauseMenuCanvas.gameObject.SetActive(false);
+            }
+
             ResumeBtn.onClick.AddListener(OnPauseOrResumeHandler);
             QuitBtn.onClick.AddListener(OnQuitHandler);
             SaveBtn.onClick.AddListener(OnSaveHandler);
@@ -31,33 +29,31 @@ namespace GrandLine
 
         private void OnQuitHandler()
         {
-            SceneManager.LoadScene("Bootstrap");
+            SceneManager.LoadScene("Start");
         }
 
         private void OnPauseOrResumeHandler()
         {
-            if(IsPaused)
+            if(Game.SceneData.IsPaused)
             {
                 PauseMenuCanvas.gameObject.SetActive(false);
-                Time.timeScale = 1.0f;
-                IsPaused = false;
+                Game.SceneData.UnPause();
             }
             else
             {
                 PauseMenuCanvas.gameObject.SetActive(true);
-                Time.timeScale = 0f;
-                IsPaused = true;
+                Game.SceneData.Pause();
             }
         }
 
         private void OnSaveHandler()
         {
-            Game.SavegameManager.OnSave();
+            Game.SavegameManager.Save();
         }
 
         private void OnLoadHandler()
         {
-            Game.SavegameManager.OnLoad();
+            Game.SavegameManager.Load();
         }
 
         // Update is called once per frame

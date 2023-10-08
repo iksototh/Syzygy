@@ -2,21 +2,22 @@ using GrandLine.Core.Enums;
 using GrandLine.World;
 using GrandLine.Overlays;
 using GrandLine.Systems.Savegame;
+using GrandLine.Managers;
+using GrandLine.Data;
 
 namespace GrandLine
 {
-    internal class Game
+    internal static class Game
     {
         public static IMap WorldMap;
         public static IOverlay Overlay;
 
         public static GameStates GameState;
 
-        public static void Pause() => GameState = GameStates.Paused;
-        public static void Resume() => GameState = GameStates.Running;
-        public static bool IsPaused = GameState == GameStates.Paused;
-
         public static SavegameManager SavegameManager;
         public static GameManager GameManager;
+        public static CombatManager CombatManager;
+
+        public static SceneData SceneData;
     }
 }

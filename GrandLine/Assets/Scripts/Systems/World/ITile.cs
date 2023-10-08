@@ -2,7 +2,7 @@
 
 namespace GrandLine.World
 {
-    interface ITile
+    public interface ITile
     {
         int X { get; }
         int Y { get; }

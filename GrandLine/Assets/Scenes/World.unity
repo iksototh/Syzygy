@@ -560,13 +560,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281081945}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 291561867}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &291561866
 GameObject:
@@ -859,7 +859,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 281081947}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
@@ -950,6 +951,9 @@ MonoBehaviour:
   OverlayBlueTile: {fileID: 11400000, guid: 03fe481d15ded964985694b3146db03f, type: 2}
   OverlayBlackTile: {fileID: 11400000, guid: 90350794e5a38534a8ddf1ba74712e64, type: 2}
   OverlayWhiteTile: {fileID: 11400000, guid: b685f722165e8654eb1c84d033a89d06, type: 2}
+  CombatData: {fileID: 11400000, guid: 4cc8f4ab69871534196aab5f3767e805, type: 2}
+  SceneData: {fileID: 11400000, guid: 9c4bc2255324e1e45bbd102bf250f4a5, type: 2}
+  _sharkPrefab: {fileID: 5510243931544771538, guid: 48b19b6fd4f1b734895dab6236244a9f, type: 3}
 --- !u!1 &792782561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,7 +1994,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 4b2671742dfbf1d44bfc64c977e0e47a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14304,7 +14308,7 @@ Transform:
   m_GameObject: {fileID: 1478848922}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0457953, y: -0.35667947, z: -43.56149}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14542,7 +14546,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 281081947}
   - {fileID: 564902791}
   - {fileID: 943599151}
   - {fileID: 342481998}
