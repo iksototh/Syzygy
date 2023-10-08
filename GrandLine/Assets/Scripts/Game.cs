@@ -17,5 +17,6 @@ namespace GrandLine
         public static bool IsPaused = GameState == GameStates.Paused;
 
         public static SavegameManager SavegameManager;
+        public static GameManager GameManager;
     }
 }

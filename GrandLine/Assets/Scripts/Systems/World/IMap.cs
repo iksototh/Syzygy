@@ -12,5 +12,6 @@ namespace GrandLine.World
         public bool IsTown(Vector3 worldPosition);
         public bool IsTown(Vector3Int cell);
         public List<ITile> GetAllTowns();
+        public ITile GetRandomTown();
     }
 }

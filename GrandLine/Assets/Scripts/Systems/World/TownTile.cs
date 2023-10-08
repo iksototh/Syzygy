@@ -1,16 +1,6 @@
-﻿using UnityEngine;
-
-namespace GrandLine.World
+﻿namespace GrandLine.Systems.World
 {
-    class TownTile : ITile
+    class TownTile : BaseTile
     {
-        public int X { get; set; }
-
-        public int Y { get; set; }
-
-        public Vector3Int ToVector3Int()
-        {
-            return new Vector3Int(X, Y, 0);
-        }
     }
 }

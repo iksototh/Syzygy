@@ -14,6 +14,7 @@ namespace GrandLine
         private PathFinder _pathFinder;
         private Rigidbody2D _rigidbody2D;
         private Vector3Int _moveTowards;
+        private Vector3Int _finalDestination;
         private List<PathTile> _path;
         private Vector2 _direction = new Vector2(0, 0);
 
@@ -35,7 +36,7 @@ namespace GrandLine
                 OnPathFailed();
                 return;
             }
-
+            _finalDestination = end;
             _path = newPath;
             var moveTowards = _path.FirstOrDefault();
             if (moveTowards != null)
@@ -48,7 +49,7 @@ namespace GrandLine
         {
             return new NavigationData
             {
-                TravelTo = _moveTowards,
+                TravelTo = _finalDestination,
                 CurrentPosition = Game.WorldMap.WorldToCell(_rigidbody2D.position)
             };
         }

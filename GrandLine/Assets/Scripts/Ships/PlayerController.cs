@@ -52,21 +52,19 @@ namespace GrandLine.Ships
             }
         }
 
-        private void OnLoad(SaveState saveState)
+        private void OnLoad(ShipState saveState)
         {
             Debug.Log("Load");
         }
 
-        private SaveState OnSave()
+        private ShipState OnSave()
         {
-            var state = new SaveState
+            return new ShipState
             {
                 Id = "player",
                 Type = Core.Enums.SaveableTypes.Player,
                 State = _shipMovementController.GetNavigationData()
             };
-
-            return state;
         }
     }
 

@@ -1,4 +1,5 @@
 using GrandLine.Core.Enums;
+using GrandLine.Systems.World;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -63,6 +64,14 @@ namespace GrandLine.World
             }
 
             _towns = towns;
+        }
+
+        public ITile GetRandomTown()
+        {
+            var townCount = _towns.Count;
+            var index = new System.Random().Next(townCount);
+            var town = _towns[index];
+            return town;
         }
     }
 }

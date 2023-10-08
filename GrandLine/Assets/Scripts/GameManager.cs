@@ -1,8 +1,10 @@
 using Cinemachine;
 using GrandLine.Core.Enums;
 using GrandLine.Overlays;
+using GrandLine.Systems.Extensions;
 using GrandLine.Systems.Savegame;
 using GrandLine.World;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -21,27 +23,110 @@ namespace GrandLine
         public Tile OverlayBlackTile;
         public Tile OverlayWhiteTile;
 
+        private GameObject _player;
+        private List<GameObject> _ships;
+
         void Awake()
         {
             Game.WorldMap = new WorldMap(WorldGrid);
+            Game.SavegameManager = new SavegameManager();
+            Game.GameManager = this;
 
-            // Spawn some enemies
-            var towns = Game.WorldMap.GetAllTowns();
-            var townCount = towns.Count;
-            var index = new System.Random().Next(townCount);
-            var town = towns[index];
+            AddOverlay();
+            CreateGame();
+        }
 
-            var player = Instantiate(Player, new Vector3(town.X + 0.5f, town.Y + 0.5f), Quaternion.identity);
+        private void CreateGame()
+        {
+            CreateWorld();
+            SpawnPlayer();
+            SpawnEnemies(5);
+        }
+
+        public void LoadGame(GameState gameState)
+        {
+            ClearGame();
+            CreateWorld();
             
-            Debug.Log(town.ToVector3Int());
-            Debug.Log(Game.WorldMap.WorldToCell(player.GetComponent<Rigidbody2D>().position));
+            foreach (var ship in gameState.ships)
+            {
+                if(ship.Type == SaveableTypes.Player)
+                {
+                    var tile = ship.State.CurrentPosition.ToBaseTile();
+                    SpawnPlayer(tile);
+                }
+                if(ship.Type == SaveableTypes.Enemy)
+                {
+                    var enemy = SpawnEnemy(ship.State.CurrentPosition.ToBaseTile());
+                    enemy.InitialTarget = ship.State.TravelTo;
+                }
+            }
+        }
+
+        private void ClearGame() 
+        {
+            Game.SavegameManager.ResetSaveableFuncs();
+            Destroy(_player);
+            foreach(var ship in _ships)
+            {
+                Destroy(ship);
+            }
+            _player = null;
+            _ships = new List<GameObject>();
+        }
+
+        private void SpawnPlayer()
+        {
+            var spawnPoint = Game.WorldMap.GetRandomTown();
+            SpawnPlayer(spawnPoint);
+        }
+
+        private void SpawnPlayer(ITile spawnPoint)
+        {
+            _player = Instantiate(Player, new Vector3(spawnPoint.X + 0.5f, spawnPoint.Y + 0.5f), Quaternion.identity);
             var playerCamera = GameObject.FindGameObjectWithTag("PlayerCamera");
             var cinematicScript = playerCamera.GetComponent<CinemachineVirtualCamera>();
-            cinematicScript.Follow = player.transform;
-            cinematicScript.LookAt = player.transform;
+            cinematicScript.Follow = _player.transform;
+            cinematicScript.LookAt = _player.transform;
+        }
 
-            
+        private void SpawnEnemies(int count = 1)
+        {
+            var spawnPoints = new List<ITile>();
+            for (var i = 0; i < count; i++)
+            {
+                var town = Game.WorldMap.GetRandomTown();
+                spawnPoints.Add(town);
+            }
 
+            SpawnEnemies(spawnPoints);
+        }
+
+        private void SpawnEnemies(List<ITile> spawnPoints)
+        {
+            _ships = new List<GameObject>();
+
+            for (var i = 0; i < spawnPoints.Count; i++)
+            {
+                var town = spawnPoints[i];
+                SpawnEnemy(town);
+            }
+        }
+
+        private EnemyShipController SpawnEnemy(ITile spawnPoint)
+        {
+            var ship = Instantiate(Enemy, new Vector3(spawnPoint.X + 0.5f, spawnPoint.Y + 0.5f), Quaternion.identity);
+            _ships.Add(ship);
+            var enemyScript = ship.GetComponent<EnemyShipController>();
+            return enemyScript;
+        }
+
+        private void CreateWorld() { }
+
+        private void CreateWorld(GameState worldState) { }
+
+        private void AddOverlay()
+        {
             var overlay = new Overlay(OverlayMap);
             overlay.Clear();
             overlay.SetTile(OverlayRedTile, TileOverlays.Red);
@@ -51,20 +136,7 @@ namespace GrandLine
             overlay.SetTile(OverlayBlueTile, TileOverlays.Blue);
             overlay.SetTile(OverlayYellowTile, TileOverlays.Yellow);
             Game.Overlay = overlay;
-
-
-            //for(var i = 0; i < 1000; i++)
-            //{
-            //    index = new System.Random().Next(townCount);
-            //    town = towns[index];
-            //    Instantiate(Enemy, new Vector3(town.X + 0.5f, town.Y + 0.5f), Quaternion.identity);
-            //}
-            index = new System.Random().Next(townCount);
-            town = towns[index];
-            Instantiate(Enemy, new Vector3(town.X + 0.5f, town.Y + 0.5f), Quaternion.identity);
-
-            var savegameManager = new SavegameManager();
-            Game.SavegameManager = savegameManager;
         }
+
     }
 }

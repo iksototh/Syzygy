@@ -8,22 +8,28 @@ namespace GrandLine.Systems.Savegame
 {
     public class SavegameManager
     {
-        private List<Func<SaveState>> SavablesFuncs;
+        private List<Func<ShipState>> SavablesFuncs;
         
         public SavegameManager() 
         { 
-            SavablesFuncs = new List<Func<SaveState>>();
+            SavablesFuncs = new List<Func<ShipState>>();
         }
 
         public void OnSave()
         {
-            var gameState = new List<SaveState>();
+            var shipStates = new List<ShipState>();
             foreach (var func in SavablesFuncs)
             {
                 var result = func();
-                gameState.Add(result);
+                shipStates.Add(result);
             }
+
+            var gameState = new GameState()
+            {
+                ships = shipStates
+            };
             var file = Path.Combine(Application.persistentDataPath, "savefile.save");
+
             File.WriteAllText(file, JsonSerialization.ToJson(gameState));
         }
 
@@ -31,13 +37,19 @@ namespace GrandLine.Systems.Savegame
         {
             var file = Path.Combine(Application.persistentDataPath, "savefile.save");
             var saveData = File.ReadAllText(file);
-            var gameState = JsonSerialization.FromJson<List<SaveState>>(saveData);
-            Debug.Log(gameState);
+            var gameState = JsonSerialization.FromJson<GameState>(saveData);
+
+            Game.GameManager.LoadGame(gameState);
         }
 
-        public void AddSaveable(Func<SaveState> func)
+        public void AddSaveable(Func<ShipState> func)
         {
             SavablesFuncs.Add(func);
+        }
+
+        public void ResetSaveableFuncs()
+        {
+            SavablesFuncs?.Clear();
         }
     }
 }
