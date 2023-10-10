@@ -55,12 +55,16 @@ namespace GrandLine.World
             var towns = new List<ITile>();
 
             var townTileMap = tileMaps.FirstOrDefault(tileMap => tileMap.tag == Tags.Town.ToString());
-            foreach (var townPosition in townTileMap.cellBounds.allPositionsWithin)
+            
+            if(townTileMap != null)
             {
-                var tile = townTileMap.GetTile(townPosition);
-                if (tile == null) continue;
+                foreach (var townPosition in townTileMap.cellBounds.allPositionsWithin)
+                {
+                    var tile = townTileMap.GetTile(townPosition);
+                    if (tile == null) continue;
 
-                towns.Add(new TownTile() { X = townPosition.x, Y = townPosition.y });
+                    towns.Add(new TownTile() { X = townPosition.x, Y = townPosition.y });
+                }
             }
 
             _towns = towns;
