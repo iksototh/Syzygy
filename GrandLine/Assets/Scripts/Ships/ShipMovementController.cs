@@ -65,7 +65,7 @@ namespace GrandLine
             var target = GetDirection();
             if (target == null) return;
 
-            _rigidbody2D.velocity = target.Value * 4f;
+            _rigidbody2D.velocity = target.Value * 2f;
         }
 
         private Vector2? GetDirection()

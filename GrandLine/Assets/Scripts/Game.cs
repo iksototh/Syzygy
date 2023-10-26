@@ -17,6 +17,7 @@ namespace GrandLine
         public static SavegameManager SavegameManager;
         public static GameManager GameManager;
         public static CombatManager CombatManager;
+        public static TownManager TownManager;
 
         public static SceneData SceneData;
     }

@@ -1,5 +1,5 @@
 using GrandLine.Systems.Savegame;
-using Unity.Serialization.Json;
+using GrandLine.Triggers;
 using UnityEngine;
 
 namespace GrandLine.Ships
@@ -34,7 +34,11 @@ namespace GrandLine.Ships
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("Trigger");
+            var trigger = collision.GetComponent<ITrigger>();
+            if (trigger != null)
+            {
+                trigger.OnTrigger();
+            }            
         }
 
         private void OnCollisionEnter2D(Collision2D collision)

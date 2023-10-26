@@ -1,9 +1,11 @@
 using Cinemachine;
+using GrandLine.Assets.Scripts.Data;
 using GrandLine.Core.Enums;
 using GrandLine.Data;
 using GrandLine.Overlays;
 using GrandLine.Systems.Extensions;
 using GrandLine.Systems.Savegame;
+using GrandLine.Systems.World;
 using GrandLine.World;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +27,7 @@ namespace GrandLine.Managers
         public Tile OverlayWhiteTile;
         public CombatData CombatData;
         public SceneData SceneData;
+        public TownData TownData;
 
         private GameObject _player;
         private List<GameObject> _ships = new List<GameObject>();
@@ -55,7 +58,7 @@ namespace GrandLine.Managers
         {
             CreateWorld();
             SpawnPlayer();
-            SpawnEnemies(5);
+            SpawnEnemies(0);
             SpawnShark();
         }
 
@@ -100,8 +103,8 @@ namespace GrandLine.Managers
 
         private void SpawnPlayer()
         {
-            var spawnPoint = Game.WorldMap.GetRandomTown();
-            SpawnPlayer(spawnPoint);
+            // var spawnPoint = Game.WorldMap.GetRandomTown();
+            SpawnPlayer(new BaseTile() { X = -16, Y=-16 });
         }
 
         private void SpawnPlayer(ITile spawnPoint)
