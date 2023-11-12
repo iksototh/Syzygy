@@ -35,6 +35,9 @@ namespace GrandLine.Managers
 
         public GameObject _sharkPrefab;
 
+        public GameObject ConfirmMenu;
+        public GameObject QuestDialog;
+
         void Awake()
         {
             Game.WorldMap = new WorldMap(WorldGrid);
@@ -59,14 +62,14 @@ namespace GrandLine.Managers
             CreateWorld();
             SpawnPlayer();
             SpawnEnemies(0);
-            SpawnShark();
+            // SpawnShark();
         }
 
         public void LoadGame(GameState gameState)
         {
             ClearGame();
             CreateWorld();
-            SpawnShark();
+            // SpawnShark();
             foreach (var ship in gameState.ships)
             {
                 if (ship.Type == SaveableTypes.Player)

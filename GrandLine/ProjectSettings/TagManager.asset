@@ -8,6 +8,7 @@ TagManager:
   - Town
   - Collision
   - Overlay
+  - Confirm
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Dialog
+    uniqueID: 2683276085
+    locked: 0
+  - name: UI
+    uniqueID: 3267311431
     locked: 0

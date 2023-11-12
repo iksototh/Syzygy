@@ -12,7 +12,7 @@ namespace GrandLine
         
         void Awake()
         {
-            EnterBtn.onClick.AddListener(Enter);
+            //EnterBtn.onClick.AddListener(Enter);
             LeaveBtn.onClick.AddListener(Leave);
         }
 
@@ -26,6 +26,12 @@ namespace GrandLine
             // Game.SceneData.Pause();
         }
 
+        public void Show()
+        {
+            Game.SceneData.Pause();
+            ConfirmCanvas.gameObject.SetActive(true);
+        }
+
         private void Enter()
         {
             Debug.Log("Enter");
@@ -35,7 +41,7 @@ namespace GrandLine
         private void Leave()
         {
             Game.SceneData.UnPause();
-            Destroy(this.gameObject);
+            ConfirmCanvas.gameObject.SetActive(false);
         }
     }
 }

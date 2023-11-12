@@ -37,6 +37,7 @@ namespace GrandLine.Ships
             var trigger = collision.GetComponent<ITrigger>();
             if (trigger != null)
             {
+                Debug.Log("Trigger something");
                 trigger.OnTrigger();
             }            
         }
