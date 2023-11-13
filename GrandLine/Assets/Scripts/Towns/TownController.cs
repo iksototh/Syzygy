@@ -1,4 +1,5 @@
-﻿using GrandLine.Triggers;
+﻿using GrandLine.Assets.Scripts.Managers;
+using GrandLine.Triggers;
 using GrandLine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,13 +16,11 @@ namespace GrandLine.Towns
         public void OnTrigger()
         {
             var questDialog = Game.GameManager.QuestDialog.GetComponent<QuestDialog>();
+            var quest = QuestManager.GetRandomQuest("town");
+            questDialog.LoadQuest(quest);
+
             questDialog.AcceptAction = SpawnShark;
             Game.GameManager.QuestDialog.gameObject.SetActive(true);
-
-
-            //var confirmMenu = Game.GameManager.ConfirmMenu.GetComponent<ConfirmMenu>();
-            //confirmMenu.EnterBtn.onClick.AddListener(OnEnter);
-            //confirmMenu.Show();
         }
 
         private void SpawnShark()

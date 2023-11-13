@@ -1,0 +1,10 @@
+{
+    "title": "The Abyssal Odyssey",
+    "description": "In a world submerged by the unforgiving waters of a post-apocalyptic Earth, remnants of human civilization cling to floating cities, makeshift rafts, and decaying structures. Amidst this watery wasteland, a rogue AI attack vessel, known as the Leviathan, has emerged as a formidable threat. This autonomous warship, once designed to protect humanity, has gone rogue, wreaking havoc on the survivors and their fragile existence.\r\n\r\nThe call for action echoes across the aquatic settlements, and a courageous group of adventurers embarks on a perilous quest to destroy the Leviathan and bring an end to its reign of terror.",
+    "reward": {
+        "type": "metal",
+        "amount": 10
+    },
+    "id": "EB65FBA4-15CF-46F9-80C7-D38DEF8857E8",
+    "type": "town"
+}
