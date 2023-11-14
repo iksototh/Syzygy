@@ -1,15 +1,24 @@
-﻿using System;
+﻿using GrandLine.Encounters;
+using System;
 
 namespace GrandLine.Models
 {
     [Serializable]
-    public class Quest
+    public class QuestDetails
     {
         public Reward Reward;
         public string Title;
         public string Description;
         public string Id;
         public string Type;
+        public Encounter Encounter;
+    }
+
+    public class Quest
+    {
+        public QuestDetails QuestInformation;
+        public Guid Id => new Guid(QuestInformation.Id);
         public bool Completed;
+        public IEncounter Encounter;
     }
 }

@@ -1,3 +1,4 @@
+using GrandLine.Assets.Scripts.Managers;
 using GrandLine.Models;
 using System;
 using TMPro;
@@ -16,6 +17,9 @@ namespace GrandLine.UI
         public Button AcceptBtn;
         public Button CancelBtn;
         public Action AcceptAction;
+        public Action CancelAction;
+
+        private Guid questId;
 
         private void Awake()
         {
@@ -25,9 +29,12 @@ namespace GrandLine.UI
 
         public void LoadQuest(Quest quest)
         {
-            Description.text = quest.Description;
-            Title.text = quest.Title;
-            Reward.text = $"{quest.Reward.Amount}x {quest.Reward.Type}";
+            questId = new Guid(quest.QuestInformation.Id);
+            Description.text = quest.QuestInformation.Description;
+            Title.text = quest.QuestInformation.Title;
+            Reward.text = $"{quest.QuestInformation.Reward.Amount}x {quest.QuestInformation.Reward.Type}";
+            AcceptAction = () => quest.Encounter.Accept(() => QuestManager.CompleteQuest(quest.Id));
+            gameObject.SetActive(true);
         }
 
         private void OnEnable()
@@ -42,13 +49,14 @@ namespace GrandLine.UI
 
         private void Accept()
         {
+            QuestManager.AcceptQuest(questId);
             AcceptAction();
             gameObject.SetActive(false);
         }
 
         private void Cancel()
         {
-            Debug.Log("Cancel");
+            if(CancelAction != null) CancelAction();
             gameObject.SetActive(false);
         }
     }

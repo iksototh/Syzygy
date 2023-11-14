@@ -1,4 +1,5 @@
-﻿using GrandLine.Models;
+﻿using GrandLine.Encounters;
+using GrandLine.Models;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,31 @@ namespace GrandLine.Data
     public class QuestData : ScriptableObject
     {
         public List<Quest> Quests;
+        public List<Guid> ActiveQuests;
 
-        public void AddQuest(Quest quest)
+        public QuestData() 
+        { 
+            Quests = new List<Quest>();
+            ActiveQuests = new List<Guid>();
+        }
+
+        public void AddQuest(QuestDetails questDetails)
         {
-            Quests.Add(quest);
+            var quest = new Quest() { QuestInformation = questDetails };
+            switch (quest.QuestInformation?.Encounter?.Type)
+            {
+                case "shark":
+                    quest.Encounter = new SharkEncounter();
+                    break;
+                case "rogueship":
+                    quest.Encounter = new AiShipEncounter();
+                    break;
+            }
+            
+            if(quest.Encounter != null)
+            {
+                Quests.Add(quest);
+            }
         }
     }
 }

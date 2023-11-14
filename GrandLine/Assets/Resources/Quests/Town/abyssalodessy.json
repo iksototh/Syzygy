@@ -6,5 +6,8 @@
         "amount": 10
     },
     "id": "EB65FBA4-15CF-46F9-80C7-D38DEF8857E8",
-    "type": "town"
+    "type": "town",
+    "encounter": {
+        "type": "rogueship"
+    }
 }

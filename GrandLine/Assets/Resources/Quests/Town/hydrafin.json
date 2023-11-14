@@ -6,5 +6,8 @@
         "amount": 100
     },
     "id": "F165580C-46FB-4EE4-8291-3436B4453B0F",
-    "type": "town"
+    "type": "town",
+    "encounter": {
+        "type": "shark"
+    }
 }

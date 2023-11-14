@@ -1,6 +1,8 @@
 ﻿using GrandLine.Data;
 using GrandLine.Models;
+using GrandLine.UI;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -15,11 +17,10 @@ namespace GrandLine.Assets.Scripts.Managers
         void Awake()
         {
             var questData = ScriptableObject.CreateInstance<QuestData>();
-            questData.Quests = new List<Quest>();
             foreach (var questAsset in Resources.LoadAll<TextAsset>("Quests/"))
             {
-                var quest = JsonConvert.DeserializeObject<Quest>(questAsset.text);
-                questData.AddQuest(quest);
+                var questDetails = JsonConvert.DeserializeObject<QuestDetails>(questAsset.text);
+                questData.AddQuest(questDetails);
             }
             AssetDatabase.CreateAsset(questData, "Assets/Data/Quests.asset");
             QuestData = questData;
@@ -27,8 +28,49 @@ namespace GrandLine.Assets.Scripts.Managers
 
         public static Quest GetRandomQuest(string questType)
         {
-            var randomIndex = Random.Range(0, QuestData.Quests.Where(quest => quest.Type == questType).Count());
+            var randomIndex = UnityEngine.Random.Range(0, QuestData.Quests.Where(quest => quest.QuestInformation.Type == questType && !quest.Completed).Count());
             return QuestData.Quests[randomIndex];
+        }
+
+        // Add town guid in future for list of possible town quests
+        public static void LoadTownQuest()
+        {
+            if (QuestData.ActiveQuests.Any()) 
+            {
+                Debug.Log("Only one quest at a time");
+                return;
+            }
+            var questDialog = Game.GameManager.QuestDialog.GetComponent<QuestDialog>();
+            var quest = GetRandomQuest("town");
+            questDialog.LoadQuest(quest);
+        }
+
+        public static QuestDetails GetQuestDetails(Guid questId) 
+        { 
+            var quest = QuestData.Quests.First(quest => quest.Id == questId);
+            return quest.QuestInformation;
+        }
+
+        public static void AcceptQuest(Guid questId)
+        {
+            QuestData.ActiveQuests.Add(questId);
+        }
+
+        public static void CompleteActiveQuest()
+        {
+            CompleteQuest(QuestData.Quests.First().Id);
+        }
+
+        public static void CompleteQuest(Guid questId)
+        {
+            var questDetails = GetQuestDetails(questId);
+            Debug.Log($"Completed quest! Reward: {questDetails.Reward.Amount}x {questDetails.Reward.Type}");
+            QuestData.ActiveQuests.Remove(questId);
+        }
+
+        public static void CancelQuest(Guid questId)
+        {
+            QuestData.ActiveQuests.Remove(questId);
         }
     }
 }
