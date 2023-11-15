@@ -2,6 +2,7 @@
 using GrandLine.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace GrandLine.Data
@@ -20,7 +21,11 @@ namespace GrandLine.Data
 
         public void AddQuest(QuestDetails questDetails)
         {
-            var quest = new Quest() { QuestInformation = questDetails };
+            var quest = new Quest() { 
+                QuestInformation = questDetails, 
+                Objective = questDetails.Objectives.First() 
+            };
+
             switch (quest.QuestInformation?.Encounter?.Type)
             {
                 case "shark":

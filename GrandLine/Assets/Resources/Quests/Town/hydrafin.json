@@ -1,6 +1,11 @@
 {
     "title": "Hydrafin",
     "description": "In the desolate wasteland of the post-apocalyptic world, survivors have established a coastal settlement called \"Aqua Haven.\" However, the once calm waters surrounding the haven have become a perilous domain ruled by a monstrous mutated shark known as \"Hydrafin.\" This aquatic behemoth terrorizes the inhabitants of Aqua Haven, attacking fishing boats, destroying nets, and instilling fear among the community.\r\n\r\nThe quest is to embark on a perilous journey to hunt down and eliminate Hydrafin, ensuring the safety of Aqua Haven and its people. The mutated shark is rumored to lurk in the deeper, more treacherous waters beyond the settlement.",
+    "objectives": [
+        {
+            "description": "Hunt down and eliminate Hydrafin."
+        }
+    ],
     "reward": {
         "type": "wood",
         "amount": 100
