@@ -370,7 +370,7 @@ PrefabInstance:
     - target: {fileID: 357670721742338030, guid: bd1d02c5a30dd264da2ca60dbccb4db9, type: 3}
       propertyPath: SceneData
       value: 
-      objectReference: {fileID: 11400000, guid: 9c4bc2255324e1e45bbd102bf250f4a5, type: 2}
+      objectReference: {fileID: 11400000, guid: f978b485fac3e2d49a07502f640ffdc4, type: 2}
     - target: {fileID: 2299309220395976348, guid: bd1d02c5a30dd264da2ca60dbccb4db9, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1024

@@ -53,9 +53,7 @@ namespace GrandLine.Quests
                 return;
             }
 
-            var questDialog = Game.GameManager.QuestDialog.GetComponent<QuestDialog>();
-
-            questDialog.LoadQuest(quest);
+            UIManager.QuestDialog.LoadQuest(quest, () => quest.Encounter.Accept(() => CompleteQuest(quest.Id)));
         }
 
         public static QuestDetails GetQuestDetails(Guid questId)

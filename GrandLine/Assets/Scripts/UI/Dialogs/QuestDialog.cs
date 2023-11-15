@@ -26,13 +26,13 @@ namespace GrandLine.UI.Dialogs
             CancelBtn.onClick.AddListener(Cancel);
         }
 
-        public void LoadQuest(Quest quest)
+        public void LoadQuest(Quest quest, Action acceptAction)
         {
             questId = new Guid(quest.QuestInformation.Id);
             Description.text = quest.QuestInformation.Description;
             Title.text = quest.QuestInformation.Title;
             Reward.text = $"{quest.QuestInformation.Reward.Amount}x {quest.QuestInformation.Reward.Type}";
-            AcceptAction = () => quest.Encounter.Accept(() => QuestManager.CompleteQuest(quest.Id));
+            AcceptAction = acceptAction;
             gameObject.SetActive(true);
         }
 

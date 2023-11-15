@@ -12,13 +12,11 @@ namespace GrandLine.UI.Menus
         public Button SaveBtn;
         public Button LoadBtn;
 
-        public Canvas PauseMenuCanvas;
-
         void Start()
         {
             if (!Game.SceneData.IsPaused)
             {
-                PauseMenuCanvas.gameObject.SetActive(false);
+                gameObject.SetActive(false);
             }
 
             ResumeBtn.onClick.AddListener(OnPauseOrResumeHandler);
@@ -32,16 +30,16 @@ namespace GrandLine.UI.Menus
             SceneManager.LoadScene("Start");
         }
 
-        private void OnPauseOrResumeHandler()
+        public void OnPauseOrResumeHandler()
         {
             if (Game.SceneData.IsPaused)
             {
-                PauseMenuCanvas.gameObject.SetActive(false);
+                gameObject.SetActive(false);
                 Game.SceneData.UnPause();
             }
             else
             {
-                PauseMenuCanvas.gameObject.SetActive(true);
+                gameObject.SetActive(true);
                 Game.SceneData.Pause();
             }
         }
@@ -54,15 +52,6 @@ namespace GrandLine.UI.Menus
         private void OnLoadHandler()
         {
             Game.SavegameManager.Load();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            if (Keyboard.current?.escapeKey.wasReleasedThisFrame == true)
-            {
-                OnPauseOrResumeHandler();
-            }
         }
     }
 }

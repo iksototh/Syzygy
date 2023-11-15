@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,40 +9,31 @@ namespace GrandLine.UI.Menus
         public Button EnterBtn;
         public Button LeaveBtn;
 
-        public Canvas ConfirmCanvas;
+        public Action EnterAction;
 
         void Awake()
         {
-            //EnterBtn.onClick.AddListener(Enter);
+            EnterBtn.onClick.AddListener(Enter);
             LeaveBtn.onClick.AddListener(Leave);
-        }
-
-        private void Start()
-        {
-            if (!Game.SceneData.IsPaused)
-            {
-                ConfirmCanvas.gameObject.SetActive(false);
-            }
-
-            // Game.SceneData.Pause();
         }
 
         public void Show()
         {
             Game.SceneData.Pause();
-            ConfirmCanvas.gameObject.SetActive(true);
+            gameObject.SetActive(true);
         }
 
         private void Enter()
         {
             Debug.Log("Enter");
-
+            gameObject.SetActive(false);
+            EnterAction();
         }
 
         private void Leave()
         {
             Game.SceneData.UnPause();
-            ConfirmCanvas.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

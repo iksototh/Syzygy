@@ -36,7 +36,6 @@ namespace GrandLine.Core
         public GameObject _sharkPrefab;
 
         public GameObject ConfirmMenu;
-        public GameObject QuestDialog;
 
         void Awake()
         {
