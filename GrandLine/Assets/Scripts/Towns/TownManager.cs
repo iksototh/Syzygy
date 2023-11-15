@@ -1,12 +1,12 @@
-﻿using GrandLine.Data;
+﻿using GrandLine.Core;
 using GrandLine.World;
 using UnityEngine;
 
-namespace GrandLine.Managers
+namespace GrandLine.Towns
 {
     public class TownManager : MonoBehaviour
     {
-        public SceneData SceneData;
+        public GameData SceneData;
         public Grid WorldGrid;
         public GameObject Player;
 

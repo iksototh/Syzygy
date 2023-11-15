@@ -1,5 +1,4 @@
-﻿using GrandLine.Assets.Scripts.Managers;
-using GrandLine.Encounters;
+﻿using GrandLine.Encounters;
 using System;
 using System.Collections;
 using UnityEngine;

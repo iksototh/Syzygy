@@ -1,4 +1,4 @@
-﻿using GrandLine.Assets.Scripts.Managers;
+﻿using GrandLine.Quests;
 using GrandLine.Triggers;
 using UnityEngine;
 using UnityEngine.SceneManagement;

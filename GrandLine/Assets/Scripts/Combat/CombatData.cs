@@ -2,12 +2,12 @@
 using GrandLine.World;
 using UnityEngine;
 
-namespace GrandLine.Assets.Scripts.Data
+namespace GrandLine.Combat
 {
     [CreateAssetMenu]
-    public class TownData : ScriptableObject
+    public class CombatData : ScriptableObject
     {
-        public TownTypes TownType;
+        public CombatTypes CombatType;
         public ITile InitiatorTile;
         public string EncounterId;
     }

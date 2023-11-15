@@ -1,10 +1,10 @@
-using GrandLine.Data;
+using GrandLine.Core;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace GrandLine.UI
+namespace GrandLine.UI.Menus
 {
     public class MainUI : MonoBehaviour
     {
@@ -12,7 +12,7 @@ namespace GrandLine.UI
         public Button QuitBtn;
         public Button ContinueBtn;
 
-        public SceneData SceneData;
+        public GameData SceneData;
 
         private void Awake()
         {
@@ -24,8 +24,8 @@ namespace GrandLine.UI
         private void OnContinueClick()
         {
             var file = Path.Combine(Application.persistentDataPath, "savefile.save");
-            
-            if(File.Exists(file))
+
+            if (File.Exists(file))
             {
                 SceneData.Continue = true;
                 SceneData.Pause();

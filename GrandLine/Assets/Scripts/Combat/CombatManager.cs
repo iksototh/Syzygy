@@ -1,13 +1,12 @@
-using GrandLine.Data;
+using GrandLine.Core;
 using GrandLine.World;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace GrandLine.Managers
+namespace GrandLine.Combat
 {
     public class CombatManager : MonoBehaviour
     {
-        public SceneData SceneData;
+        public GameData SceneData;
         public Grid WorldGrid;
         public GameObject Player;
         public GameObject Shark;
@@ -17,7 +16,7 @@ namespace GrandLine.Managers
             Game.CombatManager = this;
             Game.SceneData = SceneData;
             Game.WorldMap = new WorldMap(WorldGrid);
-            
+
             Instantiate(Player, new Vector3(0.5f, -0.5f), Quaternion.identity);
 
             Instantiate(Shark, new Vector3(5.5f, 9), Quaternion.identity);

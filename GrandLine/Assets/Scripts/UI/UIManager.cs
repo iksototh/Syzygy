@@ -1,8 +1,7 @@
-﻿using GrandLine.UI;
-using System.Collections;
+﻿using GrandLine.UI.Player;
 using UnityEngine;
 
-namespace GrandLine.Assets.Scripts.Managers
+namespace GrandLine.UI
 {
     public class UIManager : MonoBehaviour
     {

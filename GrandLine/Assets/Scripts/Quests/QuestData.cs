@@ -1,11 +1,11 @@
-﻿using GrandLine.Encounters;
-using GrandLine.Models;
+﻿using GrandLine.Core.Models;
+using GrandLine.Encounters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace GrandLine.Data
+namespace GrandLine.Quests
 {
     [CreateAssetMenu]
     public class QuestData : ScriptableObject
@@ -13,17 +13,18 @@ namespace GrandLine.Data
         public List<Quest> Quests;
         public List<Guid> ActiveQuests;
 
-        public QuestData() 
-        { 
+        public QuestData()
+        {
             Quests = new List<Quest>();
             ActiveQuests = new List<Guid>();
         }
 
         public void AddQuest(QuestDetails questDetails)
         {
-            var quest = new Quest() { 
-                QuestInformation = questDetails, 
-                Objective = questDetails.Objectives.First() 
+            var quest = new Quest()
+            {
+                QuestInformation = questDetails,
+                Objective = questDetails.Objectives.First()
             };
 
             switch (quest.QuestInformation?.Encounter?.Type)
@@ -35,8 +36,8 @@ namespace GrandLine.Data
                     quest.Encounter = new AiShipEncounter();
                     break;
             }
-            
-            if(quest.Encounter != null)
+
+            if (quest.Encounter != null)
             {
                 Quests.Add(quest);
             }

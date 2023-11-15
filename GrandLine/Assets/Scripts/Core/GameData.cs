@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GrandLine.Data
+namespace GrandLine.Core
 {
     [CreateAssetMenu]
-    public class SceneData : ScriptableObject
+    public class GameData : ScriptableObject
     {
         public bool Continue = false;
         private bool _paused = false;
@@ -14,7 +14,7 @@ namespace GrandLine.Data
 
         public bool IsPaused => _paused;
 
-        public void Pause() 
+        public void Pause()
         {
             Time.timeScale = 0f;
             _paused = true;

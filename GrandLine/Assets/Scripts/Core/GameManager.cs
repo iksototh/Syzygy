@@ -1,17 +1,17 @@
 using Cinemachine;
-using GrandLine.Assets.Scripts.Data;
+using GrandLine.Combat;
 using GrandLine.Core.Enums;
-using GrandLine.Data;
 using GrandLine.Overlays;
 using GrandLine.Systems.Extensions;
 using GrandLine.Systems.Savegame;
 using GrandLine.Systems.World;
+using GrandLine.Towns;
 using GrandLine.World;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace GrandLine.Managers
+namespace GrandLine.Core
 {
     public class GameManager : MonoBehaviour
     {
@@ -26,7 +26,7 @@ namespace GrandLine.Managers
         public Tile OverlayBlackTile;
         public Tile OverlayWhiteTile;
         public CombatData CombatData;
-        public SceneData SceneData;
+        public GameData SceneData;
         public TownData TownData;
 
         private GameObject _player;
@@ -47,14 +47,15 @@ namespace GrandLine.Managers
 
             AddOverlay();
             // TODO: This should be moved
-            if(!SceneData.Continue)
+            if (!SceneData.Continue)
             {
                 CreateGame();
-            } else
+            }
+            else
             {
                 Game.SavegameManager.Load();
             }
-            
+
         }
 
         private void CreateGame()
@@ -107,7 +108,7 @@ namespace GrandLine.Managers
         private void SpawnPlayer()
         {
             // var spawnPoint = Game.WorldMap.GetRandomTown();
-            SpawnPlayer(new BaseTile() { X = -16, Y=-16 });
+            SpawnPlayer(new BaseTile() { X = -16, Y = -16 });
         }
 
         private void SpawnPlayer(ITile spawnPoint)

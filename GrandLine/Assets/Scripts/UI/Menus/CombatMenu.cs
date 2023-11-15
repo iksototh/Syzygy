@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace GrandLine.UI
+namespace GrandLine.UI.Menus
 {
     public class CombatMenu : MonoBehaviour
     {

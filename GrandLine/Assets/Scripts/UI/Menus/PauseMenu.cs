@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace GrandLine
+namespace GrandLine.UI.Menus
 {
     public class PauseMenu : MonoBehaviour
     {
@@ -24,7 +24,7 @@ namespace GrandLine
             ResumeBtn.onClick.AddListener(OnPauseOrResumeHandler);
             QuitBtn.onClick.AddListener(OnQuitHandler);
             SaveBtn.onClick.AddListener(OnSaveHandler);
-            LoadBtn.onClick.AddListener(OnLoadHandler); 
+            LoadBtn.onClick.AddListener(OnLoadHandler);
         }
 
         private void OnQuitHandler()
@@ -34,7 +34,7 @@ namespace GrandLine
 
         private void OnPauseOrResumeHandler()
         {
-            if(Game.SceneData.IsPaused)
+            if (Game.SceneData.IsPaused)
             {
                 PauseMenuCanvas.gameObject.SetActive(false);
                 Game.SceneData.UnPause();
@@ -59,7 +59,7 @@ namespace GrandLine
         // Update is called once per frame
         void Update()
         {
-            if(Keyboard.current?.escapeKey.wasReleasedThisFrame == true)
+            if (Keyboard.current?.escapeKey.wasReleasedThisFrame == true)
             {
                 OnPauseOrResumeHandler();
             }

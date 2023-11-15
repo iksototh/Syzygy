@@ -2,8 +2,9 @@ using GrandLine.Core.Enums;
 using GrandLine.World;
 using GrandLine.Overlays;
 using GrandLine.Systems.Savegame;
-using GrandLine.Managers;
-using GrandLine.Data;
+using GrandLine.Combat;
+using GrandLine.Towns;
+using GrandLine.Core;
 
 namespace GrandLine
 {
@@ -19,6 +20,6 @@ namespace GrandLine
         public static CombatManager CombatManager;
         public static TownManager TownManager;
 
-        public static SceneData SceneData;
+        public static GameData SceneData;
     }
 }

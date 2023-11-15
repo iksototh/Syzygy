@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GrandLine
+namespace GrandLine.UI.Menus
 {
     public class ConfirmMenu : MonoBehaviour
     {
@@ -9,7 +9,7 @@ namespace GrandLine
         public Button LeaveBtn;
 
         public Canvas ConfirmCanvas;
-        
+
         void Awake()
         {
             //EnterBtn.onClick.AddListener(Enter);

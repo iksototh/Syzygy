@@ -1,4 +1,4 @@
-﻿namespace GrandLine.Models
+﻿namespace GrandLine.Core.Models
 {
     public class Encounter
     {

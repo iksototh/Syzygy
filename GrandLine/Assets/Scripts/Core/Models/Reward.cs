@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GrandLine.Models
+namespace GrandLine.Core.Models
 {
     [Serializable]
     public class Reward

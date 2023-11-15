@@ -1,13 +1,13 @@
-﻿using GrandLine.Data;
-using GrandLine.Models;
+﻿using GrandLine.Core.Models;
 using GrandLine.UI;
+using GrandLine.UI.Dialogs;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace GrandLine.Assets.Scripts.Managers
+namespace GrandLine.Quests
 {
     public class QuestManager : MonoBehaviour
     {
@@ -31,10 +31,10 @@ namespace GrandLine.Assets.Scripts.Managers
                 .Quests
                 .Where(quest => quest.QuestInformation.Type == questType && !quest.Completed && !QuestData.ActiveQuests.Exists(activeQuest => activeQuest == quest.Id))
                 .ToList();
-            if(questList.Count == 0) return null;
+            if (questList.Count == 0) return null;
 
             var randomIndex = UnityEngine.Random.Range(0, questList.Count);
-            
+
             return questList[randomIndex];
         }
 
@@ -47,14 +47,14 @@ namespace GrandLine.Assets.Scripts.Managers
                 return;
             }
             var quest = GetRandomQuest("town");
-            if(quest == null)
+            if (quest == null)
             {
                 Debug.Log("No more quests currently");
                 return;
             }
 
             var questDialog = Game.GameManager.QuestDialog.GetComponent<QuestDialog>();
-            
+
             questDialog.LoadQuest(quest);
         }
 
@@ -82,7 +82,7 @@ namespace GrandLine.Assets.Scripts.Managers
             var questDetails = GetQuestDetails(questId);
             Debug.Log($"Completed quest! Reward: {questDetails.Reward.Amount}x {questDetails.Reward.Type}");
             QuestData.ActiveQuests.Remove(questId);
-            if(!QuestData.ActiveQuests.Any())
+            if (!QuestData.ActiveQuests.Any())
             {
                 UIManager.QuestUi.gameObject.SetActive(false);
             }

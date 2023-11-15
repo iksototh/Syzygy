@@ -1,19 +1,18 @@
-using GrandLine.Assets.Scripts.Managers;
-using GrandLine.Models;
+using GrandLine.Core.Models;
+using GrandLine.Quests;
 using System;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GrandLine.UI
+namespace GrandLine.UI.Dialogs
 {
     public class QuestDialog : MonoBehaviour
     {
         public TextMeshProUGUI Description;
         public TextMeshProUGUI Reward;
         public TextMeshProUGUI Title;
-        
+
         public Button AcceptBtn;
         public Button CancelBtn;
         public Action AcceptAction;
@@ -56,7 +55,7 @@ namespace GrandLine.UI
 
         private void Cancel()
         {
-            if(CancelAction != null) CancelAction();
+            if (CancelAction != null) CancelAction();
             gameObject.SetActive(false);
         }
     }

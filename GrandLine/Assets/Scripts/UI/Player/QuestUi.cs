@@ -1,11 +1,11 @@
-﻿using GrandLine.Models;
+﻿using GrandLine.Quests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
 
-namespace GrandLine.UI
+namespace GrandLine.UI.Player
 {
     public class QuestUi : MonoBehaviour
     {
@@ -22,7 +22,7 @@ namespace GrandLine.UI
             var questGO = Instantiate(Quest, QuestList.transform);
             _activeQuests.Add(quest.Id, questGO);
 
-            if(_activeQuests.Count > 1) 
+            if (_activeQuests.Count > 1)
             {
                 questGO.transform.localPosition = new Vector3Int(0, -150, 0);
                 Panel.GetComponent<RectTransform>().sizeDelta = new Vector2Int(300, 600);

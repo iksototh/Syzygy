@@ -2,8 +2,9 @@
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using GrandLine;
 
-namespace GrandLine.UI
+namespace GrandLine.UI.Menus
 {
     public class TownMenu : MonoBehaviour
     {
@@ -19,7 +20,7 @@ namespace GrandLine.UI
             QuitBtn.onClick.AddListener(OnQuitHandler);
         }
 
-        private void OnPauseOrResumeHandler() 
+        private void OnPauseOrResumeHandler()
         {
             if (Game.SceneData.IsPaused)
             {
@@ -32,7 +33,7 @@ namespace GrandLine.UI
                 Game.SceneData.Pause();
             }
         }
-        private void OnLeave() 
+        private void OnLeave()
         {
             Game.TownManager.SceneData.Continue = true;
             SceneManager.LoadScene("World");
