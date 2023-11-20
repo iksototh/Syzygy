@@ -1,6 +1,5 @@
-using GrandLine.Core.Models;
+using GrandLine.Events;
 using GrandLine.Quests;
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,10 +14,8 @@ namespace GrandLine.UI.Dialogs
 
         public Button AcceptBtn;
         public Button CancelBtn;
-        public Action AcceptAction;
-        public Action CancelAction;
 
-        private Guid questId;
+        private string questId;
 
         private void Awake()
         {
@@ -26,13 +23,12 @@ namespace GrandLine.UI.Dialogs
             CancelBtn.onClick.AddListener(Cancel);
         }
 
-        public void LoadQuest(Quest quest, Action acceptAction)
+        public void LoadQuest(Quest quest)
         {
-            questId = new Guid(quest.QuestInformation.Id);
+            questId = quest.Id;
             Description.text = quest.QuestInformation.Description;
             Title.text = quest.QuestInformation.Title;
             Reward.text = $"{quest.QuestInformation.Reward.Amount}x {quest.QuestInformation.Reward.Type}";
-            AcceptAction = acceptAction;
             gameObject.SetActive(true);
         }
 
@@ -48,14 +44,13 @@ namespace GrandLine.UI.Dialogs
 
         private void Accept()
         {
-            QuestManager.AcceptQuest(questId);
-            AcceptAction();
+            EventManager.TriggerEvent(EventTypes.QuestAccepted, new QuestEventArgs() { Id = questId });
             gameObject.SetActive(false);
         }
 
         private void Cancel()
         {
-            if (CancelAction != null) CancelAction();
+            EventManager.TriggerEvent(EventTypes.QuestRejected, new QuestEventArgs() { Id = questId });
             gameObject.SetActive(false);
         }
     }

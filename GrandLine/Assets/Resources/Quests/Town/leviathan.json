@@ -1,0 +1,19 @@
+{
+    "title": "Slaying the Leviathan",
+    "description": "In a world swallowed by the relentless embrace of the post-apocalyptic water, where the remnants of civilization cling to life on makeshift floating settlements, a looming threat emerges from the depths. The settlement of Aqua Haven is under siege by a colossal sea creature known as the Leviathan, a monstrous being that strikes fear into the hearts of those who dare to sail the once familiar waters.\n\nThe settlement's desperate leaders send out a call for brave adventurers to embark on a perilous quest to slay the Leviathan and secure the future of Aqua Haven. The creature's attacks have become more frequent and devastating, jeopardizing the fragile balance the settlement has maintained since the world was swallowed by the sea.",
+    "objectives": [
+        {
+            "description": "Slay the Leviathan to save the outpost."
+        }
+    ],
+    "reward": {
+        "type": "meat",
+        "amount": 20
+    },
+    "id": "AB65FBA4-15CF-46F9-80C7-D38DEF8857E8",
+    "type": "town",
+    "encounter": {
+        "type": "shark"
+    }
+
+}

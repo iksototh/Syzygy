@@ -13,7 +13,7 @@ namespace GrandLine.UI.Player
         public GameObject Quest;
         public GameObject Panel;
 
-        private Dictionary<Guid, GameObject> _activeQuests = new Dictionary<Guid, GameObject>();
+        private Dictionary<string, GameObject> _activeQuests = new Dictionary<string, GameObject>();
 
         public void AddQuest(Quest quest)
         {
@@ -31,7 +31,7 @@ namespace GrandLine.UI.Player
             gameObject.SetActive(true);
         }
 
-        public void RemoveQuest(Guid questId)
+        public void RemoveQuest(string questId)
         {
             var quest = _activeQuests[questId];
             _activeQuests.Remove(questId);

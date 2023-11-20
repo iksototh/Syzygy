@@ -8,7 +8,7 @@ namespace GrandLine.Quests
     {
         public QuestDetails QuestInformation;
         public Objective Objective;
-        public Guid Id => new Guid(QuestInformation.Id);
+        public string Id => QuestInformation.Id;
         public bool Completed;
         public IEncounter Encounter;
     }

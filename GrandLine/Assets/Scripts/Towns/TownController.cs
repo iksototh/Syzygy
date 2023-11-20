@@ -1,6 +1,5 @@
-﻿using GrandLine.Quests;
-using GrandLine.Triggers;
-using GrandLine.UI;
+﻿using GrandLine.Events;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,15 +7,6 @@ namespace GrandLine.Towns
 {
     public class TownController : MonoBehaviour
     {
-        //public void OnTrigger()
-        //{
-        //    // Should add the town here
-        //    //UIManager.ConfirmMenu.EnterAction = OnEnter;
-        //    //UIManager.ConfirmMenu.Show();
-            
-
-        //}
-
         private void OnEnter()
         {
             Debug.Log("Enter");
@@ -27,7 +17,9 @@ namespace GrandLine.Towns
         private void OnTriggerEnter2D(Collider2D collision)
         {
             Debug.Log("Trigger town");
-            QuestManager.LoadTownQuest();
+            EventManager.TriggerEvent(EventTypes.QuestLoad, new EventArgs());
+            //UIManager.ConfirmMenu.EnterAction = OnEnter;
+            //UIManager.ConfirmMenu.Show();
         }
     }
 }

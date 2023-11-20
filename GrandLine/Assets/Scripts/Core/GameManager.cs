@@ -1,6 +1,7 @@
 using Cinemachine;
 using GrandLine.Combat;
 using GrandLine.Core.Enums;
+using GrandLine.Items;
 using GrandLine.Overlays;
 using GrandLine.Systems.Extensions;
 using GrandLine.Systems.Savegame;

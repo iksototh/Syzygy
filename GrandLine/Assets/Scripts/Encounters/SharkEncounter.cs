@@ -1,15 +1,22 @@
 ﻿using GrandLine.Encounters;
 using System;
-using System.Collections;
 using UnityEngine;
 
 namespace GrandLine.Encounters
 {
     public class SharkEncounter : IEncounter
     {
-        public void Accept(Action complete)
+        private string _relatedQuestId;
+
+        public SharkEncounter() { }
+
+        public SharkEncounter(string relatedQuestId)
         {
-            Complete = complete;
+            _relatedQuestId = relatedQuestId;
+        }
+
+        public void Accept()
+        {
             SpawnShark();
         }
 
@@ -25,7 +32,8 @@ namespace GrandLine.Encounters
 
             var sharkObject = UnityEngine.Object.Instantiate(Game.GameManager._sharkPrefab, new Vector3(-10, -10), Quaternion.identity);
             var sharkScript = sharkObject.GetComponent<SharkAttack>();
-            sharkScript.Complete = Complete;
+            sharkScript.RelatedQuestId = _relatedQuestId;
+            // sharkScript.Complete = Complete;
         }
     }
 }

@@ -12,7 +12,6 @@ namespace GrandLine
     {
         public static IMap WorldMap;
         public static IOverlay Overlay;
-
         public static GameStates GameState;
 
         public static SavegameManager SavegameManager;

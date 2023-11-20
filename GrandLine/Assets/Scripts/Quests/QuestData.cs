@@ -1,5 +1,6 @@
 ﻿using GrandLine.Core.Models;
 using GrandLine.Encounters;
+using GrandLine.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,16 +8,16 @@ using UnityEngine;
 
 namespace GrandLine.Quests
 {
-    [CreateAssetMenu]
     public class QuestData : ScriptableObject
     {
         public List<Quest> Quests;
-        public List<Guid> ActiveQuests;
+        public List<string> ActiveQuests;
+        public event Action OnQuestComplete;
 
         public QuestData()
         {
             Quests = new List<Quest>();
-            ActiveQuests = new List<Guid>();
+            ActiveQuests = new List<string>();
         }
 
         public void AddQuest(QuestDetails questDetails)
@@ -30,10 +31,10 @@ namespace GrandLine.Quests
             switch (quest.QuestInformation?.Encounter?.Type)
             {
                 case "shark":
-                    quest.Encounter = new SharkEncounter();
+                    quest.Encounter = new SharkEncounter(quest.Id);
                     break;
                 case "rogueship":
-                    quest.Encounter = new AiShipEncounter();
+                    quest.Encounter = new AiShipEncounter(quest.Id);
                     break;
             }
 
