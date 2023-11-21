@@ -6,6 +6,6 @@ namespace GrandLine.Core.Models
     public class Reward
     {
         public string Type;
-        public string Amount;
+        public int Amount;
     }
 }

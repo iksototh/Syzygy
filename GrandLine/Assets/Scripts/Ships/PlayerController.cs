@@ -1,6 +1,7 @@
 using GrandLine.Systems.Savegame;
 using GrandLine.Triggers;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace GrandLine.Ships
 {
@@ -52,6 +53,8 @@ namespace GrandLine.Ships
         {
             if (Input.GetMouseButtonUp(0))
             {
+                if (EventSystem.current.IsPointerOverGameObject()) return;
+                
                 var end = Game.WorldMap.WorldToCell(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
                 _shipMovementController.TravelTo(end);
             }
