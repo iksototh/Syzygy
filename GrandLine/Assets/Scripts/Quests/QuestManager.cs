@@ -18,6 +18,8 @@ namespace GrandLine.Quests
     {
         private static QuestData QuestData;
 
+        public static QuestManager instance;
+
         void Awake()
         {
             var questData = ScriptableObject.CreateInstance<QuestData>();
@@ -28,6 +30,7 @@ namespace GrandLine.Quests
             }
             
             QuestData = questData;
+            instance = this;
         }
 
         private void Start()
@@ -37,7 +40,7 @@ namespace GrandLine.Quests
             EventManager.AddListener(EventTypes.EncounterCompleted, OnEncounterCompleted);
         }
 
-        public static Quest GetRandomQuest(string questType)
+        public Quest GetRandomQuest(string questType)
         {
             var questList = QuestData
                 .Quests
@@ -67,7 +70,7 @@ namespace GrandLine.Quests
             UIManager.QuestDialog.LoadQuest(quest);
         }
 
-        public static QuestDetails GetQuestDetails(string questId)
+        public QuestDetails GetQuestDetails(string questId)
         {
             var quest = QuestData.Quests.First(quest => quest.Id == questId);
             return quest.QuestInformation;
@@ -91,7 +94,7 @@ namespace GrandLine.Quests
             quest.Encounter.Accept();
         }
 
-        public static void CompleteQuest(string questId)
+        public void CompleteQuest(string questId)
         {
             UIManager.QuestUi.RemoveQuest(questId);
             var questDetails = GetQuestDetails(questId);
@@ -110,12 +113,12 @@ namespace GrandLine.Quests
             });
         }
 
-        public static Reward GetQuestReward(string questId)
+        public Reward GetQuestReward(string questId)
         {
             return GetQuest(questId).QuestInformation.Reward;
         }
 
-        public static void CancelQuest(string questId)
+        public void CancelQuest(string questId)
         {
             QuestData.ActiveQuests.Remove(questId);
         }

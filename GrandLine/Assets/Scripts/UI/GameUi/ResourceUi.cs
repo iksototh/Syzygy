@@ -3,6 +3,7 @@ using GrandLine.Quests;
 using GrandLine.ResourceSystem;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GrandLine.UI.GameUi
 {

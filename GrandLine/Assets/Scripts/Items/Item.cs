@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using UnityEngine;
 
 namespace GrandLine.Items
@@ -14,6 +15,7 @@ namespace GrandLine.Items
 
         public string IconPath;
 
+        [JsonIgnore]
         public Sprite IconSprite;
     }
 }

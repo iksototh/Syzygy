@@ -8,9 +8,22 @@ namespace GrandLine.ResourceSystem
     {
         private ResourceStore _resourceStore;
 
+        public static ResourceManager instance;
+
         private void Awake()
         {
             _resourceStore = new ResourceStore();
+            instance = this;
+        }
+
+        public object Save()
+        {
+            return _resourceStore.Serialize();
+        }
+
+        public void Load(object data)
+        {
+            _resourceStore.CreateStore(data);
         }
 
         private void Start()

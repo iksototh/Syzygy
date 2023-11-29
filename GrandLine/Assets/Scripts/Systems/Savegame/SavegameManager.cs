@@ -1,7 +1,8 @@
-﻿using System;
+﻿using GrandLine.ResourceSystem;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using Unity.Serialization.Json;
 using UnityEngine;
 
 namespace GrandLine.Systems.Savegame
@@ -15,7 +16,7 @@ namespace GrandLine.Systems.Savegame
             SavablesFuncs = new List<Func<ShipState>>();
         }
 
-        public void Save(string fileName = "savefile.save")
+        public void Save(string fileName = "savefile1.save")
         {
             var shipStates = new List<ShipState>();
             foreach (var func in SavablesFuncs)
@@ -28,17 +29,23 @@ namespace GrandLine.Systems.Savegame
             {
                 ships = shipStates
             };
-            var file = Path.Combine(Application.persistentDataPath, fileName);
 
-            File.WriteAllText(file, JsonSerialization.ToJson(gameState));
+            gameState.resourceStore = ResourceManager.instance.Save();
+
+            var file = Path.Combine(Application.persistentDataPath, fileName);
+            var jsonData = JsonConvert.SerializeObject(gameState, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
+            File.WriteAllText(file, jsonData);
         }
 
-        public void Load(string fileName = "savefile.save")
+        public void Load(string fileName = "savefile1.save")
         {
             var file = Path.Combine(Application.persistentDataPath, fileName);
             var saveData = File.ReadAllText(file);
-            var gameState = JsonSerialization.FromJson<GameState>(saveData);
-
+            var gameState = JsonConvert.DeserializeObject<GameState>(saveData);
+            ResourceManager.instance.Load(gameState.resourceStore);
             Game.GameManager.LoadGame(gameState);
         }
 
