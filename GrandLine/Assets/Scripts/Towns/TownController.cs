@@ -17,7 +17,7 @@ namespace GrandLine.Towns
         private void OnTriggerEnter2D(Collider2D collision)
         {
             Debug.Log("Trigger town");
-            EventManager.TriggerEvent(EventTypes.QuestLoad, new EventArgs());
+            EventManager.TriggerEvent(EventTypes.QuestLoad, new BaseEventArgs());
             //UIManager.ConfirmMenu.EnterAction = OnEnter;
             //UIManager.ConfirmMenu.Show();
         }

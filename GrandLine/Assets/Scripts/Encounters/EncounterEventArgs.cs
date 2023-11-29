@@ -1,8 +1,8 @@
-﻿using System;
+﻿using GrandLine.Events;
 
 namespace GrandLine.Encounters
 {
-    public class EncounterEventArgs : EventArgs
+    public class EncounterEventArgs : IEventArgs
     {
         public string QuestId;
     }

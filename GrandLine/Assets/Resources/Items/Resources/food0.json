@@ -1,0 +1,7 @@
+{
+    "id": "food0",
+    "type": "food",
+    "name": "Meat",
+    "description": "Some edible meat",
+    "iconPath": "icons/resources/food0"
+}

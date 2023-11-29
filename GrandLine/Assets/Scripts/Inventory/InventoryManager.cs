@@ -13,15 +13,6 @@ namespace GrandLine.Inventory
     {
         private static Inventory Inventory;
 
-        public TextMeshProUGUI Water;
-        public TextMeshProUGUI Food;
-        public TextMeshProUGUI Wood;
-        public TextMeshProUGUI Metal;
-        public TextMeshProUGUI Scrap;
-        public TextMeshProUGUI Dirt;
-        public TextMeshProUGUI Fuel;
-        public TextMeshProUGUI Shinies;
-
         void Awake()
         {
             //var inventoryData = ScriptableObject.CreateInstance<Inventory>();
@@ -38,37 +29,16 @@ namespace GrandLine.Inventory
             EventManager.AddListener(EventTypes.QuestCompleted, OnQuestCompleted);
         }
 
-        private void OnQuestCompleted(EventArgs args)
+        private void OnQuestCompleted(IEventArgs args)
         {
             var eventArgs = args as QuestCompletedArgs;
-            switch(eventArgs.Reward.Type)
+            switch (eventArgs.Reward.Type)
             {
-                case "water":
-                    Water.text = (int.Parse(Water.text) + eventArgs.Reward.Amount).ToString();
+                case "item":
+                    // Water.text = (int.Parse(Water.text) + eventArgs.Reward.Amount).ToString();
                     break;
-                case "food":
-                     Food.text = (int.Parse(Food.text) + eventArgs.Reward.Amount).ToString();
-                    break;
-                case "metal":
-                    Metal.text = (int.Parse(Metal.text) + eventArgs.Reward.Amount).ToString();
-                    break;
-                case "wood":
-                    Wood.text = (int.Parse(Wood.text) + eventArgs.Reward.Amount).ToString();
-                    break;
-                case "scrap":
-                    Scrap.text = (int.Parse(Scrap.text) + eventArgs.Reward.Amount).ToString();
-                    break;
-                case "dirt":
-                    Dirt.text = (int.Parse(Dirt.text) + eventArgs.Reward.Amount).ToString();
-                    break;
-                case "fuel":
-                    Fuel.text = (int.Parse(Fuel.text) + eventArgs.Reward.Amount).ToString();
-                    break;
-                case "shinies":
-                    Shinies.text = (int.Parse(Shinies.text) + eventArgs.Reward.Amount).ToString();
-                    break;
+
             }
-            Debug.Log($"{eventArgs.Reward.Amount} - {eventArgs.Reward.Type}");
         }
     }
 }

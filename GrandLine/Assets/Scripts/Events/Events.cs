@@ -8,6 +8,8 @@
         QuestRejected,
         QuestFailed,
 
+        ResourceChanged,
+
         EncounterStarted,
         EncounterCompleted,
 

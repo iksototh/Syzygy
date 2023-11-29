@@ -1,0 +1,7 @@
+{
+    "id": "steel0",
+    "type": "metal",
+    "name": "Steel",
+    "description": "A piece of steel",
+    "iconPath": "icons/resources/steel0"
+}

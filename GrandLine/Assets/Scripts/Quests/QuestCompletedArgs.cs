@@ -1,9 +1,9 @@
 ﻿using GrandLine.Core.Models;
-using System;
+using GrandLine.Events;
 
 namespace GrandLine.Quests
 {
-    public class QuestCompletedArgs : EventArgs
+    public class QuestCompletedArgs : IEventArgs
     {
         public string Id;
         public Reward Reward;

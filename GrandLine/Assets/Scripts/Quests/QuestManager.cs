@@ -1,16 +1,14 @@
 ﻿using GrandLine.Core.Models;
 using GrandLine.Encounters;
 using GrandLine.Events;
-using GrandLine.Inventory;
 using GrandLine.UI;
 using Newtonsoft.Json;
-using System;
 using System.Linq;
 using UnityEngine;
 
 namespace GrandLine.Quests
 {
-    public class QuestEventArgs : EventArgs
+    public class QuestEventArgs : IEventArgs
     {
         public string Id;
         public string Name;
@@ -28,7 +26,7 @@ namespace GrandLine.Quests
                 var questDetails = JsonConvert.DeserializeObject<QuestDetails>(questAsset.text);
                 questData.AddQuest(questDetails);
             }
-            // AssetDatabase.CreateAsset(questData, "Assets/Data/Quests.asset");
+            
             QuestData = questData;
         }
 
@@ -52,7 +50,7 @@ namespace GrandLine.Quests
             return questList[randomIndex];
         }
 
-        private void OnQuestLoad(EventArgs args)
+        private void OnQuestLoad(IEventArgs args)
         {
             if (QuestData.ActiveQuests.Count > 1)
             {
@@ -81,9 +79,10 @@ namespace GrandLine.Quests
             return quest;
         }
 
-        public static void OnQuestAccepted(EventArgs args)
+        public static void OnQuestAccepted(IEventArgs args)
         {
-            var eventArgs = args as QuestEventArgs;
+            QuestEventArgs eventArgs = args as QuestEventArgs;
+            Debug.Log($"eventArgs {eventArgs.Id}");
             var quest = GetQuest(eventArgs.Id);
 
             UIManager.QuestUi.AddQuest(quest);
@@ -121,10 +120,10 @@ namespace GrandLine.Quests
             QuestData.ActiveQuests.Remove(questId);
         }
 
-        private void OnEncounterCompleted(EventArgs args)
+        private void OnEncounterCompleted(IEventArgs args)
         {
             var eventArgs = args as EncounterEventArgs;
-            if(string.IsNullOrEmpty(eventArgs.QuestId))
+            if (string.IsNullOrEmpty(eventArgs.QuestId))
             {
                 return;
             }
