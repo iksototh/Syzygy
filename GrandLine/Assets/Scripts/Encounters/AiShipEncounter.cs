@@ -10,6 +10,7 @@ namespace GrandLine.Encounters
         public AiShipEncounter(string relatedQuestId)
         {
             _relatedQuestId = relatedQuestId;
+            Accept();
         }
 
         public void Accept()

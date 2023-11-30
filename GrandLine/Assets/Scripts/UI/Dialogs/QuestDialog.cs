@@ -1,3 +1,4 @@
+using GrandLine.Core.Models;
 using GrandLine.Events;
 using GrandLine.Quests;
 using TMPro;
@@ -26,9 +27,9 @@ namespace GrandLine.UI.Dialogs
         public void LoadQuest(Quest quest)
         {
             questId = quest.Id;
-            Description.text = quest.QuestInformation.Description;
-            Title.text = quest.QuestInformation.Title;
-            Reward.text = $"{quest.QuestInformation.Reward.Amount}x {quest.QuestInformation.Reward.Type}";
+            Description.text = quest.Description;
+            Title.text = quest.Title;
+            Reward.text = $"{quest.Reward.Amount}x {quest.Reward.Type}";
             gameObject.SetActive(true);
         }
 

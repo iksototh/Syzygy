@@ -11,8 +11,7 @@ namespace GrandLine.Items
 
         private void Awake()
         {
-            _itemStore = new ItemStore();
-            _itemStore.LoadAllItems();
+            _itemStore = ItemStore.Create();
 
             instance = this;
         }

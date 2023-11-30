@@ -1,4 +1,5 @@
-﻿using GrandLine.ResourceSystem;
+﻿using GrandLine.Quests;
+using GrandLine.ResourceSystem;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,7 @@ namespace GrandLine.Systems.Savegame
             };
 
             gameState.resourceStore = ResourceManager.instance.Save();
+            gameState.questStore = QuestManager.instance.Save();
 
             var file = Path.Combine(Application.persistentDataPath, fileName);
             var jsonData = JsonConvert.SerializeObject(gameState, new JsonSerializerSettings
@@ -46,6 +48,7 @@ namespace GrandLine.Systems.Savegame
             var saveData = File.ReadAllText(file);
             var gameState = JsonConvert.DeserializeObject<GameState>(saveData);
             ResourceManager.instance.Load(gameState.resourceStore);
+            QuestManager.instance.Load(gameState.questStore);
             Game.GameManager.LoadGame(gameState);
         }
 

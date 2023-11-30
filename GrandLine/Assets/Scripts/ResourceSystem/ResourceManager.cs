@@ -12,18 +12,18 @@ namespace GrandLine.ResourceSystem
 
         private void Awake()
         {
-            _resourceStore = new ResourceStore();
+            _resourceStore = ResourceStore.Create();
             instance = this;
         }
 
         public object Save()
         {
-            return _resourceStore.Serialize();
+            return _resourceStore.Export();
         }
 
         public void Load(object data)
         {
-            _resourceStore.CreateStore(data);
+            _resourceStore.Import(data);
         }
 
         private void Start()

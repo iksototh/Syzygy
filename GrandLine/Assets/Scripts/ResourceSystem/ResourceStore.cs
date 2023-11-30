@@ -6,17 +6,21 @@ using System.Collections.Generic;
 
 namespace GrandLine.ResourceSystem
 {
-    [Serializable]
     public class ResourceStore
     {
         private Dictionary<string, ResourceItem> _resources = new Dictionary<string, ResourceItem>();
 
-        public object Serialize()
+        public static ResourceStore Create()
+        {
+            return new ResourceStore();
+        }
+
+        public object Export()
         {
             return _resources;
         }
 
-        public void CreateStore(object data)
+        public void Import(object data)
         {
             _resources.Clear();
             var resources = JsonConvert.DeserializeObject<Dictionary<string, ResourceItem>>(data.ToString());

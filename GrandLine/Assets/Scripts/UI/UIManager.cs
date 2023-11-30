@@ -1,6 +1,7 @@
-﻿using GrandLine.UI.Dialogs;
+﻿using GrandLine.Core.Models;
+using GrandLine.UI.Dialogs;
 using GrandLine.UI.Menus;
-using GrandLine.UI.Player;
+using GrandLine.UI.GameUi;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,11 +14,13 @@ namespace GrandLine.UI
         public GameObject PauseMenuGameObject;
         public GameObject ConfirmMenuGameObject;
 
-        public static QuestUi QuestUi;
-        public static QuestDialog QuestDialog;
-        public static ConfirmMenu ConfirmMenu;
+        public QuestUi QuestUi;
+        public QuestDialog QuestDialog;
+        public ConfirmMenu ConfirmMenu;
 
-        private static PauseMenu PauseMenu;
+        private PauseMenu PauseMenu;
+
+        public static UIManager instance;
 
         private void Awake()
         {
@@ -25,6 +28,23 @@ namespace GrandLine.UI
             QuestDialog = QuestDialogGameObject.GetComponent<QuestDialog>();
             PauseMenu = PauseMenuGameObject.GetComponent<PauseMenu>();
             ConfirmMenu = ConfirmMenuGameObject.GetComponent<ConfirmMenu>();
+
+            instance = this;
+        }
+
+        public void LoadQuest(Quest quest)
+        {
+            QuestDialog.LoadQuest(quest);
+        }
+
+        public void ActivateQuest(Quest quest)
+        {
+            QuestUi.AddQuest(quest);
+        }
+
+        public void RemoveQuest(string questId)
+        {
+            QuestUi.RemoveQuest(questId);
         }
 
         void Update()

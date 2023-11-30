@@ -13,6 +13,7 @@ namespace GrandLine.Encounters
         public SharkEncounter(string relatedQuestId)
         {
             _relatedQuestId = relatedQuestId;
+            SpawnShark();
         }
 
         public void Accept()

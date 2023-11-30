@@ -11,5 +11,6 @@ namespace GrandLine
         public List<ShipState> ships;
 
         public object resourceStore;
+        public object questStore;
     }
 }

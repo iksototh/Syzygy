@@ -1,8 +1,8 @@
 ﻿using GrandLine.Core.Models;
 using GrandLine.Encounters;
 using GrandLine.Events;
+using GrandLine.ResourceSystem;
 using GrandLine.UI;
-using Newtonsoft.Json;
 using System.Linq;
 using UnityEngine;
 
@@ -16,20 +16,14 @@ namespace GrandLine.Quests
 
     public class QuestManager : MonoBehaviour
     {
-        private static QuestData QuestData;
+        private QuestStore _questStore;
 
         public static QuestManager instance;
 
         void Awake()
         {
-            var questData = ScriptableObject.CreateInstance<QuestData>();
-            foreach (var questAsset in Resources.LoadAll<TextAsset>("Quests/"))
-            {
-                var questDetails = JsonConvert.DeserializeObject<QuestDetails>(questAsset.text);
-                questData.AddQuest(questDetails);
-            }
-            
-            QuestData = questData;
+            _questStore = QuestStore.Create();
+
             instance = this;
         }
 
@@ -40,26 +34,36 @@ namespace GrandLine.Quests
             EventManager.AddListener(EventTypes.EncounterCompleted, OnEncounterCompleted);
         }
 
+        public object Save()
+        {
+            return _questStore.Export();
+        }
+
+        public void Load(object data)
+        {
+            _questStore.Import(data);
+        }
+
+
         public Quest GetRandomQuest(string questType)
         {
-            var questList = QuestData
-                .Quests
-                .Where(quest => quest.QuestInformation.Type == questType && !quest.Completed && !QuestData.ActiveQuests.Exists(activeQuest => activeQuest == quest.Id))
-                .ToList();
-            if (questList.Count == 0) return null;
+            var quests = _questStore.GetAvailableQuestsOfType(questType).ToList();
+            
+            if (quests.Count == 0) return null;
 
-            var randomIndex = UnityEngine.Random.Range(0, questList.Count);
+            var randomIndex = Random.Range(0, quests.Count);
 
-            return questList[randomIndex];
+            return quests[randomIndex];
         }
 
         private void OnQuestLoad(IEventArgs args)
         {
-            if (QuestData.ActiveQuests.Count > 1)
+            if (_questStore.GetActiveQuests().ToList().Count > 1)
             {
                 Debug.Log("Only two quest at a time");
                 return;
             }
+
             var quest = GetRandomQuest("town");
             if (quest == null)
             {
@@ -67,60 +71,20 @@ namespace GrandLine.Quests
                 return;
             }
 
-            UIManager.QuestDialog.LoadQuest(quest);
+            UIManager.instance.LoadQuest(quest);
         }
 
-        public QuestDetails GetQuestDetails(string questId)
-        {
-            var quest = QuestData.Quests.First(quest => quest.Id == questId);
-            return quest.QuestInformation;
-        }
-
-        public static Quest GetQuest(string questId)
-        {
-            var quest = QuestData.Quests.First(quest => quest.Id == questId);
-            return quest;
-        }
-
-        public static void OnQuestAccepted(IEventArgs args)
+        private void OnQuestAccepted(IEventArgs args)
         {
             QuestEventArgs eventArgs = args as QuestEventArgs;
-            Debug.Log($"eventArgs {eventArgs.Id}");
-            var quest = GetQuest(eventArgs.Id);
-
-            UIManager.QuestUi.AddQuest(quest);
             
-            QuestData.ActiveQuests.Add(quest.Id);
-            quest.Encounter.Accept();
-        }
+            var quest = _questStore.GetQuestById(eventArgs.Id);
 
-        public void CompleteQuest(string questId)
-        {
-            UIManager.QuestUi.RemoveQuest(questId);
-            var questDetails = GetQuestDetails(questId);
+            UIManager.instance.ActivateQuest(quest);
             
-            Debug.Log($"Completed quest! Reward: {questDetails.Reward.Amount}x {questDetails.Reward.Type}");
-            QuestData.ActiveQuests.Remove(questId);
-            if (!QuestData.ActiveQuests.Any())
-            {
-                UIManager.QuestUi.gameObject.SetActive(false);
-            }
+            _questStore.AcceptQuest(quest);
 
-            EventManager.TriggerEvent(EventTypes.QuestCompleted, new QuestCompletedArgs()
-            {
-                Reward = questDetails.Reward,
-                Id = questId
-            });
-        }
-
-        public Reward GetQuestReward(string questId)
-        {
-            return GetQuest(questId).QuestInformation.Reward;
-        }
-
-        public void CancelQuest(string questId)
-        {
-            QuestData.ActiveQuests.Remove(questId);
+            EncounterManager.instance.StartEncounter(quest);
         }
 
         private void OnEncounterCompleted(IEventArgs args)
@@ -132,6 +96,25 @@ namespace GrandLine.Quests
             }
 
             CompleteQuest(eventArgs.QuestId);
+        }
+
+        private void CompleteQuest(string questId)
+        {
+            UIManager.instance.QuestUi.RemoveQuest(questId);
+            var quest = _questStore.GetQuestById(questId);
+
+            _questStore.CompleteQuest(quest);
+
+            if (!_questStore.GetActiveQuests().Any())
+            {
+                UIManager.instance.QuestUi.gameObject.SetActive(false);
+            }
+
+            EventManager.TriggerEvent(EventTypes.QuestCompleted, new QuestCompletedArgs()
+            {
+                Reward = quest.Reward,
+                Id = questId
+            });
         }
     }
 }
