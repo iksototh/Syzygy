@@ -22,7 +22,6 @@ namespace GrandLine.Events
 
         public static void TriggerEvent(EventTypes eventType, IEventArgs args)
         {
-            Debug.Log("asd");
             if (_events.TryGetValue(eventType, out List<Action<IEventArgs>> actions))
             {
                 foreach (Action<IEventArgs> action in actions) { action?.Invoke(args); }

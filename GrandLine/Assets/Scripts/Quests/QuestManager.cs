@@ -105,11 +105,6 @@ namespace GrandLine.Quests
 
             _questStore.CompleteQuest(quest);
 
-            if (!_questStore.GetActiveQuests().Any())
-            {
-                UIManager.instance.QuestUi.gameObject.SetActive(false);
-            }
-
             EventManager.TriggerEvent(EventTypes.QuestCompleted, new QuestCompletedArgs()
             {
                 Reward = quest.Reward,
