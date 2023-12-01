@@ -58,7 +58,7 @@ namespace GrandLine.Quests
 
         private void OnQuestLoad(IEventArgs args)
         {
-            if (_questStore.GetActiveQuests().ToList().Count > 1)
+            if (_questStore.GetActiveQuests().ToList().Count > 0)
             {
                 Debug.Log("Only two quest at a time");
                 return;
