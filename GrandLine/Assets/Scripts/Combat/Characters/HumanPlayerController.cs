@@ -38,6 +38,7 @@ namespace GrandLine.Combat.Characters
         // Update is called once per frame
         void Update()
         {
+            return;
             if (Input.GetMouseButtonUp(0))
             {
                 var end = Game.WorldMap.WorldToCell(_mainCamera.ScreenToWorldPoint(Input.mousePosition));

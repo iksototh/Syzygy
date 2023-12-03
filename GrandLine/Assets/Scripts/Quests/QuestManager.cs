@@ -1,19 +1,12 @@
 ﻿using GrandLine.Core.Models;
 using GrandLine.Encounters;
 using GrandLine.Events;
-using GrandLine.ResourceSystem;
 using GrandLine.UI;
 using System.Linq;
 using UnityEngine;
 
 namespace GrandLine.Quests
 {
-    public class QuestEventArgs : IEventArgs
-    {
-        public string Id;
-        public string Name;
-    }
-
     public class QuestManager : MonoBehaviour
     {
         private QuestStore _questStore;
@@ -71,7 +64,7 @@ namespace GrandLine.Quests
                 return;
             }
 
-            UIManager.instance.LoadQuest(quest);
+            UIManager.Instance.LoadQuest(quest);
         }
 
         private void OnQuestAccepted(IEventArgs args)
@@ -80,11 +73,11 @@ namespace GrandLine.Quests
             
             var quest = _questStore.GetQuestById(eventArgs.Id);
 
-            UIManager.instance.ActivateQuest(quest);
+            UIManager.Instance.ActivateQuest(quest);
             
             _questStore.AcceptQuest(quest);
 
-            EncounterManager.instance.StartEncounter(quest);
+            EncounterManager.Instance.StartEncounter(quest);
         }
 
         private void OnEncounterCompleted(IEventArgs args)
@@ -100,7 +93,7 @@ namespace GrandLine.Quests
 
         private void CompleteQuest(string questId)
         {
-            UIManager.instance.QuestUi.RemoveQuest(questId);
+            UIManager.Instance.QuestUi.RemoveQuest(questId);
             var quest = _questStore.GetQuestById(questId);
 
             _questStore.CompleteQuest(quest);

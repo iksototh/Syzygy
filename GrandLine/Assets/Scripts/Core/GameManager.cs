@@ -45,7 +45,6 @@ namespace GrandLine.Core
             Game.GameManager = this;
             Game.SceneData = SceneData;
 
-            AddOverlay();
             // TODO: This should be moved
             if (!SceneData.Continue)
             {
@@ -154,19 +153,5 @@ namespace GrandLine.Core
         private void CreateWorld() { }
 
         private void CreateWorld(GameState worldState) { }
-
-        private void AddOverlay()
-        {
-            var overlay = new Overlay(OverlayMap);
-            overlay.Clear();
-            overlay.SetTile(OverlayRedTile, TileOverlays.Red);
-            overlay.SetTile(OverlayGreenTile, TileOverlays.Green);
-            overlay.SetTile(OverlayBlackTile, TileOverlays.Black);
-            overlay.SetTile(OverlayWhiteTile, TileOverlays.White);
-            overlay.SetTile(OverlayBlueTile, TileOverlays.Blue);
-            overlay.SetTile(OverlayYellowTile, TileOverlays.Yellow);
-            Game.Overlay = overlay;
-        }
-
     }
 }

@@ -14,13 +14,13 @@ namespace GrandLine.UI
         public GameObject PauseMenuGameObject;
         public GameObject ConfirmMenuGameObject;
 
-        public QuestUi QuestUi;
-        public QuestDialog QuestDialog;
-        public ConfirmMenu ConfirmMenu;
+        public QuestUi QuestUi { get; private set; }
+        public QuestDialog QuestDialog { get; private set; }
+        public ConfirmMenu ConfirmMenu { get; private set; }
 
         private PauseMenu PauseMenu;
 
-        public static UIManager instance;
+        public static UIManager Instance { get; private set; }
 
         private void Awake()
         {
@@ -29,7 +29,7 @@ namespace GrandLine.UI
             PauseMenu = PauseMenuGameObject.GetComponent<PauseMenu>();
             ConfirmMenu = ConfirmMenuGameObject.GetComponent<ConfirmMenu>();
 
-            instance = this;
+            Instance = this;
         }
 
         public void LoadQuest(Quest quest)

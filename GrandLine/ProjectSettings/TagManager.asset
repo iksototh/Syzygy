@@ -46,6 +46,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: World
+    uniqueID: 826269573
+    locked: 0
+  - name: Characters
+    uniqueID: 1736338125
+    locked: 0
+  - name: Decals
+    uniqueID: 572430613
+    locked: 0
+  - name: Overlay
+    uniqueID: 266764267
+    locked: 0
   - name: Dialog
     uniqueID: 2683276085
     locked: 0

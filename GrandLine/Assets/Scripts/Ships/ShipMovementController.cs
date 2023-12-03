@@ -8,6 +8,8 @@ namespace GrandLine
 {
     public class ShipMovementController : MonoBehaviour
     {
+        public float BaseSpeed = 2.0f;
+
         public Action OnPathComplete;
         public Action OnPathFailed;
 
@@ -65,7 +67,7 @@ namespace GrandLine
             var target = GetDirection();
             if (target == null) return;
 
-            _rigidbody2D.velocity = target.Value * 2f;
+            _rigidbody2D.velocity = target.Value * BaseSpeed;
         }
 
         private Vector2? GetDirection()
