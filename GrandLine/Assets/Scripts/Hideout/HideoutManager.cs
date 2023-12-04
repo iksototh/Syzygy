@@ -120,9 +120,11 @@ namespace GrandLine.Assets.Scripts.Hideout
                         {
                             _dirtMounds.Remove(tilePos);
                             Destroy(mound);
-                        }   
+                        }
                     } else
                     {
+                        if(_dirtMounds.ContainsKey(tilePos)) { continue; }
+
                         var dirtMound = Instantiate(Dirt, tilePos, Quaternion.identity, Farm.transform);
                         _dirtMounds.Add(tilePos, dirtMound);
                     }

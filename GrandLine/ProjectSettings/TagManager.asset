@@ -49,6 +49,9 @@ TagManager:
   - name: World
     uniqueID: 826269573
     locked: 0
+  - name: GroundDecals
+    uniqueID: 4282284387
+    locked: 0
   - name: Characters
     uniqueID: 1736338125
     locked: 0
