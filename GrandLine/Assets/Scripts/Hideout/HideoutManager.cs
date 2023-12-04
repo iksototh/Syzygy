@@ -1,5 +1,6 @@
 ﻿using Cinemachine;
 using GrandLine.Core;
+using GrandLine.Farming;
 using GrandLine.Overlays;
 using GrandLine.World;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace GrandLine.Assets.Scripts.Hideout
 {
     public class HideoutManager : MonoBehaviour
     {
-        public HideoutManager Instance { get; private set; }
+        public static HideoutManager Instance { get; private set; }
 
         public GameData SceneData;
         public Grid WorldGrid;
@@ -64,11 +65,18 @@ namespace GrandLine.Assets.Scripts.Hideout
             _clearDirt = true;
         }
 
+        public bool PlayerCanMove()
+        {
+            return !_placeDirt && !_clearDirt && !EventSystem.current.IsPointerOverGameObject();
+        }
+
         private Vector3Int _currentPosition;
         private bool _pressed = false;
         private void Update()
         {
-            if(_mouse.leftButton.isPressed)
+            if (EventSystem.current.IsPointerOverGameObject()) return;
+
+            if(_mouse.leftButton.isPressed && (_placeDirt || _clearDirt))
             {
                 _pressed = true;
                 if (_mouse.leftButton.wasPressedThisFrame)
@@ -81,19 +89,19 @@ namespace GrandLine.Assets.Scripts.Hideout
             {
                 if (_mouse.leftButton.wasReleasedThisFrame)
                 {
-                    AddDirtMounds();
+                    // AddDirtMounds();
                     _pressed = false;
                     OverlayManager.Instance.Clear();
-                    //if(_placeDirt)
-                    //{
-                    //    AddDirtMounds();
-                    //    _placeDirt = false;
-                    //}
-                    //if(_clearDirt)
-                    //{
-                    //    AddDirtMounds(true);
-                    //    _clearDirt = false;
-                    //}
+                    if (_placeDirt)
+                    {
+                        AddDirtMounds();
+                        _placeDirt = false;
+                    }
+                    if (_clearDirt)
+                    {
+                        AddDirtMounds(true);
+                        _clearDirt = false;
+                    }
 
                 }
             }
@@ -125,7 +133,8 @@ namespace GrandLine.Assets.Scripts.Hideout
                     {
                         if(_dirtMounds.ContainsKey(tilePos)) { continue; }
 
-                        var dirtMound = Instantiate(Dirt, tilePos, Quaternion.identity, Farm.transform);
+                        var dirtMound = Instantiate(Dirt, new Vector3(tilePos.x + 0.5f, tilePos.y + .5f), Quaternion.identity, Farm.transform);
+                        
                         _dirtMounds.Add(tilePos, dirtMound);
                     }
                 }

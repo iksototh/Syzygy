@@ -1,4 +1,6 @@
+using GrandLine.Assets.Scripts.Hideout;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace GrandLine.Combat.Characters
 {
@@ -38,8 +40,7 @@ namespace GrandLine.Combat.Characters
         // Update is called once per frame
         void Update()
         {
-            return;
-            if (Input.GetMouseButtonUp(0))
+            if (Mouse.current.leftButton.wasPressedThisFrame && HideoutManager.Instance.PlayerCanMove())
             {
                 var end = Game.WorldMap.WorldToCell(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
                 _shipMovementController.TravelTo(end);
