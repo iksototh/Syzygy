@@ -1,8 +1,10 @@
 ﻿using GrandLine.Events;
 using GrandLine.Items;
+using Mono.Cecil;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GrandLine.ResourceSystem
 {
@@ -47,6 +49,16 @@ namespace GrandLine.ResourceSystem
             }
 
             EventManager.TriggerEvent(EventTypes.ResourceChanged, new ResourceEventArgs() { Resource = resource });
+        }
+
+        public int GetResourceAmount(string type)
+        {
+            if(_resources.TryGetValue(type, out var resource))
+            {
+                return resource.Amount;
+            }
+
+            return 0;
         }
     }
 }

@@ -21,5 +21,7 @@
         DaytimeDawn,
         DaytimeDay,
         DaytimeNight,
+
+        PlantHarvested,
     }
 }

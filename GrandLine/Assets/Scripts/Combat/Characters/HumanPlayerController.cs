@@ -1,4 +1,4 @@
-using GrandLine.Assets.Scripts.Hideout;
+using GrandLine.Farming;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -40,7 +40,7 @@ namespace GrandLine.Combat.Characters
         // Update is called once per frame
         void Update()
         {
-            if (Mouse.current.leftButton.wasPressedThisFrame && HideoutManager.Instance.PlayerCanMove())
+            if (Mouse.current.leftButton.wasPressedThisFrame && FarmingManager.Instance.PlayerCanMove())
             {
                 var end = Game.WorldMap.WorldToCell(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
                 _shipMovementController.TravelTo(end);

@@ -31,7 +31,7 @@ namespace GrandLine.Systems.Savegame
                 ships = shipStates
             };
 
-            gameState.resourceStore = ResourceManager.instance.Save();
+            gameState.resourceStore = ResourceManager.Instance.Save();
             gameState.questStore = QuestManager.instance.Save();
 
             var file = Path.Combine(Application.persistentDataPath, fileName);
@@ -47,7 +47,7 @@ namespace GrandLine.Systems.Savegame
             var file = Path.Combine(Application.persistentDataPath, fileName);
             var saveData = File.ReadAllText(file);
             var gameState = JsonConvert.DeserializeObject<GameState>(saveData);
-            ResourceManager.instance.Load(gameState.resourceStore);
+            ResourceManager.Instance.Load(gameState.resourceStore);
             QuestManager.instance.Load(gameState.questStore);
             Game.GameManager.LoadGame(gameState);
         }

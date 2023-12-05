@@ -1,9 +1,7 @@
 ﻿using GrandLine.Events;
-using GrandLine.Quests;
 using GrandLine.ResourceSystem;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace GrandLine.UI.GameUi
 {
@@ -18,7 +16,7 @@ namespace GrandLine.UI.GameUi
         public TextMeshProUGUI Fuel;
         public TextMeshProUGUI Shinies;
 
-        void Start()
+        void Awake()
         {
             EventManager.AddListener(EventTypes.ResourceChanged, OnResourceChanged);
         }

@@ -1,4 +1,5 @@
-﻿using GrandLine.Events;
+﻿using GrandLine.Assets.Scripts.Farming;
+using GrandLine.Events;
 using GrandLine.Quests;
 using UnityEngine;
 
@@ -8,12 +9,17 @@ namespace GrandLine.ResourceSystem
     {
         private ResourceStore _resourceStore;
 
-        public static ResourceManager instance;
+        public static ResourceManager Instance { get; private set; }
 
         private void Awake()
         {
             _resourceStore = ResourceStore.Create();
-            instance = this;
+            Instance = this;
+
+            EventManager.AddListener(EventTypes.QuestCompleted, OnQuestCompleted);
+            EventManager.AddListener(EventTypes.PlantHarvested, OnPlantHarvested);
+
+            
         }
 
         public object Save()
@@ -26,9 +32,20 @@ namespace GrandLine.ResourceSystem
             _resourceStore.Import(data);
         }
 
-        private void Start()
+        public int GetResourceAmount(string type)
         {
-            EventManager.AddListener(EventTypes.QuestCompleted, OnQuestCompleted);
+            return _resourceStore.GetResourceAmount(type);
+        }
+
+        public void AddResourceAmount(string type, int amount)
+        {
+            _resourceStore.AddResource(type, amount);
+        }
+
+        private void OnPlantHarvested(IEventArgs args) 
+        {
+            var resourceArgs = args as PlantHarvestedEventArgs;
+            _resourceStore.AddResource(resourceArgs.Type, resourceArgs.Amount);
         }
 
         private void OnQuestCompleted(IEventArgs args)
