@@ -1,11 +1,12 @@
 ﻿using GrandLine.Assets.Scripts.Farming;
 using GrandLine.Events;
 using GrandLine.Quests;
+using GrandLine.Systems.Savegame;
 using UnityEngine;
 
 namespace GrandLine.ResourceSystem
 {
-    public class ResourceManager : MonoBehaviour
+    public class ResourceManager : MonoBehaviour, ISave
     {
         private ResourceStore _resourceStore;
 

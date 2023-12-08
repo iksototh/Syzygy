@@ -16,8 +16,11 @@ namespace GrandLine.Assets.Scripts.Hideout
         private void Awake()
         {
             Instance = this;
+            
             Game.SceneData = SceneData;
             Game.WorldMap = new WorldMap(WorldGrid);
+            Game.SavegameManager = new Systems.Savegame.SavegameManager();
+            Game.SavegameManager.Load();
 
             var _player = Instantiate(Player, new Vector3(-0.5f, 0.5f), Quaternion.identity);
             var playerCamera = GameObject.FindGameObjectWithTag("PlayerCamera");

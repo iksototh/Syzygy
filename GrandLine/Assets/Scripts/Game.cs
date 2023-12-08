@@ -9,6 +9,9 @@ namespace GrandLine
 {
     internal static class Game
     {
+
+
+
         public static IMap WorldMap;
         public static GameStates GameState;
 

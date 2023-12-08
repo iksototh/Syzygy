@@ -20,7 +20,7 @@ namespace GrandLine.Towns
         {
             Debug.Log("Enter");
             Game.SavegameManager.Save();
-            SceneManager.LoadScene("Town");
+            SceneManager.LoadScene("Hideout");
         }
     }
 }

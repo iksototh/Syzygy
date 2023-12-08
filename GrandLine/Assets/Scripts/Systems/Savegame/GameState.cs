@@ -1,4 +1,3 @@
-using GrandLine.ResourceSystem;
 using GrandLine.Systems.Savegame;
 using System;
 using System.Collections.Generic;
