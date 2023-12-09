@@ -11,10 +11,15 @@ namespace GrandLine.World
     {
         private Grid _worldGrid;
         private List<ITile> _towns;
+        private Tilemap _collisionTilemap;
+
 
         public WorldMap(Grid worldGrid)
         {
             _worldGrid = worldGrid;
+            var tileMaps = _worldGrid.GetComponentsInChildren<Tilemap>();
+            _collisionTilemap = tileMaps.FirstOrDefault(tileMap => tileMap.tag == Tags.Collision.ToString());
+            
             AddTowns();
         }
 
@@ -39,15 +44,7 @@ namespace GrandLine.World
             return _towns;
         }
 
-        public Tilemap CollisionMap { get { return GetCollisionTilemap(); } }
-
-        private Tilemap GetCollisionTilemap()
-        {
-            var tileMaps = _worldGrid.GetComponentsInChildren<Tilemap>();
-            var collisionTilemap = tileMaps.FirstOrDefault(tileMap => tileMap.tag == Tags.Collision.ToString());
-
-            return collisionTilemap;
-        }
+        public Tilemap CollisionMap { get { return _collisionTilemap; } }
 
         private void AddTowns()
         {

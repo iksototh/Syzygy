@@ -42,7 +42,7 @@ namespace GrandLine.Combat.Characters
         {
             if (Mouse.current.leftButton.wasPressedThisFrame && FarmingManager.Instance.PlayerCanMove())
             {
-                var end = Game.WorldMap.WorldToCell(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
+                var end = Game.Instance.WorldMap.WorldToCell(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
                 _shipMovementController.TravelTo(end);
             }
         }

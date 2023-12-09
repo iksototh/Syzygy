@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -14,7 +13,7 @@ namespace GrandLine.UI.Menus
 
         void Start()
         {
-            if (!Game.SceneData.IsPaused)
+            if (!Game.Instance.GameData.IsPaused)
             {
                 gameObject.SetActive(false);
             }
@@ -32,26 +31,26 @@ namespace GrandLine.UI.Menus
 
         public void OnPauseOrResumeHandler()
         {
-            if (Game.SceneData.IsPaused)
+            if (Game.Instance.GameData.IsPaused)
             {
                 gameObject.SetActive(false);
-                Game.SceneData.UnPause();
+                Game.Instance.GameData.UnPause();
             }
             else
             {
                 gameObject.SetActive(true);
-                Game.SceneData.Pause();
+                Game.Instance.GameData.Pause();
             }
         }
 
         private void OnSaveHandler()
         {
-            Game.SavegameManager.Save();
+            Game.Instance.SavegameManager.Save();
         }
 
         private void OnLoadHandler()
         {
-            Game.SavegameManager.Load();
+            Game.Instance.SavegameManager.Load();
         }
     }
 }

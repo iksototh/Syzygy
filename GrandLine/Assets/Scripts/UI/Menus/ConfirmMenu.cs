@@ -19,7 +19,7 @@ namespace GrandLine.UI.Menus
 
         public void Show()
         {
-            Game.SceneData.Pause();
+            Game.Instance.GameData.Pause();
             gameObject.SetActive(true);
         }
 
@@ -32,7 +32,7 @@ namespace GrandLine.UI.Menus
 
         private void Leave()
         {
-            Game.SceneData.UnPause();
+            Game.Instance.GameData.UnPause();
             gameObject.SetActive(false);
         }
     }

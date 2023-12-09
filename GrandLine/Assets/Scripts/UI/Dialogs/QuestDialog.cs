@@ -35,12 +35,12 @@ namespace GrandLine.UI.Dialogs
 
         private void OnEnable()
         {
-            Game.SceneData.Pause();
+            Game.Instance.GameData.Pause();
         }
 
         private void OnDisable()
         {
-            Game.SceneData.UnPause();
+            Game.Instance.GameData.UnPause();
         }
 
         private void Accept()

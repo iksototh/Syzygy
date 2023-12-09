@@ -30,7 +30,7 @@ namespace GrandLine.Ships
 
         private void Start()
         {
-            Game.SavegameManager.AddSaveable(OnSave);
+            Game.Instance.SavegameManager.AddSaveable(OnSave);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -55,7 +55,7 @@ namespace GrandLine.Ships
             {
                 if (EventSystem.current.IsPointerOverGameObject()) return;
                 
-                var end = Game.WorldMap.WorldToCell(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
+                var end = Game.Instance.WorldMap.WorldToCell(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
                 _shipMovementController.TravelTo(end);
             }
         }

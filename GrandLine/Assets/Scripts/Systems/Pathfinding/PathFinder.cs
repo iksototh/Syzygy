@@ -16,11 +16,11 @@ namespace GrandLine
 
         Vector3Int GetCell(Vector2 target)
         {
-            return Game.WorldMap.WorldToCell(target);
+            return Game.Instance.WorldMap.WorldToCell(target);
         }
         bool IsBlockedCell(int x, int y)
         {
-            var colliderType = Game.WorldMap.CollisionMap.GetColliderType(new Vector3Int(x, y));
+            var colliderType = Game.Instance.WorldMap.CollisionMap.GetColliderType(new Vector3Int(x, y));
             return colliderType != UnityEngine.Tilemaps.Tile.ColliderType.None;
         }
 
@@ -45,7 +45,7 @@ namespace GrandLine
 
             void AddPathPart(PathTile pathPart, PathTile parent)
             {
-                if (IsBlockedCell(pathPart) && !Game.WorldMap.IsTown(pathPart.ToVector3Int()) || openList.Contains(pathPart) || closedList.Contains(pathPart))
+                if (IsBlockedCell(pathPart) && !Game.Instance.WorldMap.IsTown(pathPart.ToVector3Int()) || openList.Contains(pathPart) || closedList.Contains(pathPart))
                 {
                     return;
                 }

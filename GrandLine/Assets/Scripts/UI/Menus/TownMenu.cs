@@ -22,26 +22,26 @@ namespace GrandLine.UI.Menus
 
         private void OnPauseOrResumeHandler()
         {
-            if (Game.SceneData.IsPaused)
+            if (Game.Instance.GameData.IsPaused)
             {
                 TownCanvas.gameObject.SetActive(false);
-                Game.SceneData.UnPause();
+                Game.Instance.GameData.UnPause();
             }
             else
             {
                 TownCanvas.gameObject.SetActive(true);
-                Game.SceneData.Pause();
+                Game.Instance.GameData.Pause();
             }
         }
         private void OnLeave()
         {
-            Game.TownManager.SceneData.Continue = true;
+            Game.Instance.TownManager.SceneData.Continue = true;
             SceneManager.LoadScene("World");
         }
 
         void Start()
         {
-            if (!Game.SceneData.IsPaused)
+            if (!Game.Instance.GameData.IsPaused)
             {
                 TownCanvas.gameObject.SetActive(false);
             }
@@ -49,7 +49,7 @@ namespace GrandLine.UI.Menus
 
         private void OnQuitHandler()
         {
-            Game.TownManager.SceneData.Continue = false;
+            Game.Instance.TownManager.SceneData.Continue = false;
 
             SceneManager.LoadScene("Start");
         }

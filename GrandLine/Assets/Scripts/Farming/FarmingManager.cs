@@ -70,10 +70,10 @@ namespace GrandLine.Farming
                 _pressed = true;
                 if (_mouse.leftButton.wasPressedThisFrame)
                 {
-                    _startPosition = Game.WorldMap.WorldToCell(_camera.ScreenToWorldPoint(_mouse.position.value));
+                    _startPosition = Game.Instance.WorldMap.WorldToCell(_camera.ScreenToWorldPoint(_mouse.position.value));
                 }
 
-                _currentPosition = Game.WorldMap.WorldToCell(_camera.ScreenToWorldPoint(_mouse.position.value));
+                _currentPosition = Game.Instance.WorldMap.WorldToCell(_camera.ScreenToWorldPoint(_mouse.position.value));
             }
             else
             {

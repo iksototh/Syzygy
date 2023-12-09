@@ -7,24 +7,23 @@ using UnityEngine;
 
 namespace GrandLine.Quests
 {
-    public class QuestManager : MonoBehaviour
+    public class QuestManager
     {
         private QuestStore _questStore;
 
-        public static QuestManager instance;
 
-        void Awake()
+        private QuestManager()
         {
             _questStore = QuestStore.Create();
 
-            instance = this;
-        }
-
-        private void Start()
-        {
             EventManager.AddListener(EventTypes.QuestLoad, OnQuestLoad);
             EventManager.AddListener(EventTypes.QuestAccepted, OnQuestAccepted);
             EventManager.AddListener(EventTypes.EncounterCompleted, OnEncounterCompleted);
+        }
+
+        public static QuestManager Create()
+        {
+            return new QuestManager();
         }
 
         public object Save()
@@ -77,7 +76,7 @@ namespace GrandLine.Quests
             
             _questStore.AcceptQuest(quest);
 
-            EncounterManager.Instance.StartEncounter(quest);
+            Game.Instance.EncounterManager.StartQuestEncounter(quest);
         }
 
         private void OnEncounterCompleted(IEventArgs args)

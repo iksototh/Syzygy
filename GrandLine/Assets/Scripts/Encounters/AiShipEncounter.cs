@@ -1,25 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace GrandLine.Encounters
 {
-    public class AiShipEncounter : IEncounter
+    public class AiShipEncounter : MonoBehaviour, IEncounter
     {
-        private string _relatedQuestId;
+        public Action OnCompleted { get; set; }
 
-        public AiShipEncounter() { }
-        public AiShipEncounter(string relatedQuestId)
+        public void OnTriggerEnter2D(Collider2D collision)
         {
-            _relatedQuestId = relatedQuestId;
-            Accept();
-        }
-
-        public void Accept()
-        {
-            Debug.Log("AI Encounter");
-            
-            var sharkObject = Object.Instantiate(Game.GameManager._sharkPrefab, new UnityEngine.Vector3(-15, -10), Quaternion.identity);
-            var sharkScript = sharkObject.GetComponent<SharkAttack>();
-            sharkScript.RelatedQuestId = _relatedQuestId;
+            Debug.Log("AI encounter triggered");
+            OnCompleted();
+            Destroy(gameObject);
         }
     }
 }

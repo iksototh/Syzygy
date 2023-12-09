@@ -6,8 +6,11 @@ using UnityEngine;
 
 namespace GrandLine.Encounters
 {
-    public class EncounterStore
+    [CreateAssetMenu(menuName = "Encounters/Encounter Store")]
+    public class EncounterStore : ScriptableObject
     {
+        public List<EncounterBase> Encounters;
+
         private List<Encounter> _encounters;
         private List<Encounter> _activeEncounters;
 
@@ -17,11 +20,9 @@ namespace GrandLine.Encounters
             _activeEncounters = new List<Encounter>();
         }
 
-        public static EncounterStore Create()
+        public void Init()
         {
-            var encounterStore = new EncounterStore();
-            encounterStore.LoadAllEncounters();
-            return encounterStore;
+            LoadAllEncounters();
         }
 
         private void LoadAllEncounters()
@@ -39,9 +40,9 @@ namespace GrandLine.Encounters
             return _encounters.FirstOrDefault(encounter => encounter.Id == encounterId);
         }
 
-        public List<Encounter> GetEncountersOfType(string type)
+        public List<EncounterBase> GetEncountersOfType(string type)
         {
-            return _encounters.Where(encounter => encounter.Type == type).ToList();
+            return Encounters.Where(encounter => encounter.EncounterType == type).ToList();
         }
     }
 }

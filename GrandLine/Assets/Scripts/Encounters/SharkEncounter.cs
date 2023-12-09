@@ -1,40 +1,18 @@
-﻿using GrandLine.Encounters;
+﻿using GrandLine.Events;
 using System;
 using UnityEngine;
 
 namespace GrandLine.Encounters
 {
-    public class SharkEncounter : IEncounter
+    public class SharkEncounter : MonoBehaviour, IEncounter
     {
-        private string _relatedQuestId;
+        public Action OnCompleted { get; set; }
 
-        public SharkEncounter() { }
-
-        public SharkEncounter(string relatedQuestId)
+        public void OnTriggerEnter2D(Collider2D collision)
         {
-            _relatedQuestId = relatedQuestId;
-            SpawnShark();
-        }
-
-        public void Accept()
-        {
-            SpawnShark();
-        }
-
-        private Action Complete;
-        private void SpawnShark()
-        {
-            Debug.Log("Spawn shark");
-            //var townCell = Game.WorldMap.WorldToCell(gameObject.transform.position);
-            //var x = Random.Range(1, 10) + 0.5f;
-            //var y = Random.Range(1, 10) + 0.5f;
-            //x = Random.Range(0, 1) == 0 ? -x : x;
-            //y = Random.Range(0, 1) == 0 ? -y : y;
-
-            var sharkObject = UnityEngine.Object.Instantiate(Game.GameManager._sharkPrefab, new Vector3(-10, -10), Quaternion.identity);
-            var sharkScript = sharkObject.GetComponent<SharkAttack>();
-            sharkScript.RelatedQuestId = _relatedQuestId;
-            // sharkScript.Complete = Complete;
+            Debug.Log("Shark encounter triggered");
+            OnCompleted();
+            Destroy(gameObject);
         }
     }
 }

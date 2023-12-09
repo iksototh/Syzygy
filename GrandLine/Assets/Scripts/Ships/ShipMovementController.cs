@@ -52,7 +52,7 @@ namespace GrandLine
             return new NavigationData
             {
                 TravelTo = _finalDestination,
-                CurrentPosition = Game.WorldMap.WorldToCell(_rigidbody2D.position)
+                CurrentPosition = Game.Instance.WorldMap.WorldToCell(_rigidbody2D.position)
             };
         }
 
@@ -81,7 +81,7 @@ namespace GrandLine
 
             var newPosition = GetDirection(_direction, position);
 
-            var cell = Game.WorldMap.WorldToCell(newPosition);
+            var cell = Game.Instance.WorldMap.WorldToCell(newPosition);
             _direction = new Vector2(towards.X - cell.x, towards.Y - cell.y);
 
 

@@ -13,9 +13,9 @@ namespace GrandLine.Combat
 
         private void Awake()
         {
-            Game.CombatManager = this;
-            Game.SceneData = SceneData;
-            Game.WorldMap = new WorldMap(WorldGrid);
+            //Game.CombatManager = this;
+            Game.Instance.GameData = SceneData;
+            //Game.WorldMap = new WorldMap(WorldGrid);
 
             Instantiate(Player, new Vector3(0.5f, -0.5f), Quaternion.identity);
 

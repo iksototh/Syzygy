@@ -1,33 +1,37 @@
 ﻿using GrandLine.Core.Models;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace GrandLine.Encounters
 {
-    public class EncounterManager : MonoBehaviour
+    public class EncounterManager
     {
-        public static EncounterManager Instance { get; private set; }
-
         private EncounterStore _encounterStore;
 
-        private void Awake()
+        private EncounterManager()
         {
-            Instance = this;
-            _encounterStore = EncounterStore.Create();
+            _encounterStore = Resources.Load<EncounterStore>("EncounterDatabase");
+            _encounterStore.Init();
         }
 
-        public void StartEncounter(Quest quest)
+        public static EncounterManager Create()
         {
-            var encounters = _encounterStore.GetEncountersOfType(quest.Encounter.Type);
-            
-            switch (quest.Encounter.Type)
+
+            return new EncounterManager();
+        }
+
+        public void StartQuestEncounter(Quest quest)
+        {
+            var encounter = _encounterStore.GetEncountersOfType(quest.Encounter.Type).FirstOrDefault();
+            if (encounter == null)
             {
-                case "shark":
-                    new SharkEncounter(quest.Id);
-                    break;
-                case "rogueship":
-                    new AiShipEncounter(quest.Id);
-                    break;
+                Debug.LogWarning($"No such encounter type: {quest.Encounter.Type}");
+                return;
             }
+
+            encounter.SetQuest(quest.Id);
+            encounter.Execute();
         }
     }
 }

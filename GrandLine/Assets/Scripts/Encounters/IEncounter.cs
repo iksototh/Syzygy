@@ -2,8 +2,8 @@
 
 namespace GrandLine.Encounters
 {
-    public interface IEncounter
+    internal interface IEncounter
     {
-        public void Accept();
+        public Action OnCompleted { get; set; }
     }
 }

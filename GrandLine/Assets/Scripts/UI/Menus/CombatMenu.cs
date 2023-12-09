@@ -16,10 +16,10 @@ namespace GrandLine.UI.Menus
 
         void Start()
         {
-            if (!Game.SceneData.IsPaused)
-            {
-                PauseMenuCanvas.gameObject.SetActive(false);
-            }
+            //if (!Game.Instance.SceneData.IsPaused)
+            //{
+            //    PauseMenuCanvas.gameObject.SetActive(false);
+            //}
 
             ResumeBtn.onClick.AddListener(OnPauseOrResumeHandler);
             QuitBtn.onClick.AddListener(OnQuitHandler);
@@ -28,28 +28,28 @@ namespace GrandLine.UI.Menus
 
         private void OnQuitHandler()
         {
-            Game.CombatManager.SceneData.Continue = false;
+            Game.Instance.CombatManager.SceneData.Continue = false;
 
             SceneManager.LoadScene("Start");
         }
 
         private void OnPauseOrResumeHandler()
         {
-            if (Game.SceneData.IsPaused)
-            {
-                PauseMenuCanvas.gameObject.SetActive(false);
-                Game.SceneData.UnPause();
-            }
-            else
-            {
-                PauseMenuCanvas.gameObject.SetActive(true);
-                Game.SceneData.Pause();
-            }
+            //if (Game.Instance.SceneData.IsPaused)
+            //{
+            //    PauseMenuCanvas.gameObject.SetActive(false);
+            //    Game.Instance.SceneData.UnPause();
+            //}
+            //else
+            //{
+            //    PauseMenuCanvas.gameObject.SetActive(true);
+            //    Game.Instance.SceneData.Pause();
+            //}
         }
 
         private void OnFleeHandler()
         {
-            Game.CombatManager.SceneData.Continue = true;
+            // Game.CombatManager.SceneData.Continue = true;
             SceneManager.LoadScene("World");
         }
 

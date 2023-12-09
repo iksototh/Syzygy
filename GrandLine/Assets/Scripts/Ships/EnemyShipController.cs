@@ -23,12 +23,12 @@ namespace GrandLine
             _shipMovementController.OnPathFailed = OnPathFailed;
             _shipMovementController.TravelTo(InitialTarget != null ? InitialTarget : GetNextTarget());
 
-            Game.SavegameManager.AddSaveable(OnSave);
+            Game.Instance.SavegameManager.AddSaveable(OnSave);
         }
 
         Vector3Int GetNextTarget()
         {
-            var nextTarget = Game.WorldMap.GetRandomTown().ToVector3Int();
+            var nextTarget = Game.Instance.WorldMap.GetRandomTown().ToVector3Int();
             return nextTarget;
         }
 
