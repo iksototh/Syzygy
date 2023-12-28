@@ -9,6 +9,7 @@ TagManager:
   - Collision
   - Overlay
   - Confirm
+  - StartTown
   layers:
   - Default
   - TransparentFX

@@ -47,7 +47,6 @@ namespace GrandLine
             WorldMap = new WorldMap(WorldGrid);
             SavegameManager = new SavegameManager();
 
-
             EncounterManager = EncounterManager.Create();
             QuestManager = QuestManager.Create();
         }
