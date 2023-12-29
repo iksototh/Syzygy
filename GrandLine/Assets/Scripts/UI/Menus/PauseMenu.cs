@@ -13,6 +13,8 @@ namespace GrandLine.UI.Menus
 
         void Start()
         {
+            Debug.Log("PAUSE MENU");
+
             if (!Game.Instance.GameData.IsPaused)
             {
                 gameObject.SetActive(false);
@@ -31,6 +33,8 @@ namespace GrandLine.UI.Menus
 
         public void OnPauseOrResumeHandler()
         {
+            Debug.Log($"Game is paused {Game.Instance.GameData.IsPaused}");
+
             if (Game.Instance.GameData.IsPaused)
             {
                 gameObject.SetActive(false);

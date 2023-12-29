@@ -16,6 +16,8 @@ namespace GrandLine
 {
     public class Game : MonoBehaviour
     {
+        public GameData GameData; // SO for game state
+
         // Can we move these?
         public Grid WorldGrid;
         public GameObject Player;
@@ -26,24 +28,22 @@ namespace GrandLine
         public SavegameManager SavegameManager;
         public CombatManager CombatManager;
         public TownManager TownManager;
-        internal EncounterManager EncounterManager;
-        internal QuestManager QuestManager;
         public ItemManager ItemManager;
         public ResourceManager ResourceManager;
 
+        internal EncounterManager EncounterManager;
+        internal QuestManager QuestManager;
         internal IMap WorldMap;
-        internal GameData GameData;
 
         private void Awake()
         {
             Instance = this;
-
+            
             Init();
         }
 
         private void Init()
         {
-            GameData = ScriptableObject.CreateInstance<GameData>();
             WorldMap = new WorldMap(WorldGrid);
             SavegameManager = new SavegameManager();
 

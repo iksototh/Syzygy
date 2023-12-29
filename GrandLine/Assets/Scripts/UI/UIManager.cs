@@ -9,10 +9,11 @@ namespace GrandLine.UI
 {
     public class UIManager : MonoBehaviour
     {
-        public GameObject QuestUIGameObject;
-        public GameObject QuestDialogGameObject;
-        public GameObject PauseMenuGameObject;
-        public GameObject ConfirmMenuGameObject;
+        public Canvas QuestUICanvas;
+        public Canvas QuestDialogCanvas;
+        public Canvas PauseMenuCanvas;
+        public Canvas ConfirmMenuCanvas;
+        public Canvas ResourceUICanvas;
 
         public QuestUi QuestUi { get; private set; }
         public QuestDialog QuestDialog { get; private set; }
@@ -24,12 +25,32 @@ namespace GrandLine.UI
 
         private void Awake()
         {
-            QuestUi = QuestUIGameObject.GetComponent<QuestUi>();
-            QuestDialog = QuestDialogGameObject.GetComponent<QuestDialog>();
-            PauseMenu = PauseMenuGameObject.GetComponent<PauseMenu>();
-            ConfirmMenu = ConfirmMenuGameObject.GetComponent<ConfirmMenu>();
+            QuestUICanvas.worldCamera = Camera.main;
+            QuestDialogCanvas.worldCamera = Camera.main;
+            PauseMenuCanvas.worldCamera = Camera.main;
+            ConfirmMenuCanvas.worldCamera = Camera.main;
+            ResourceUICanvas.worldCamera = Camera.main;
+
+            QuestUi = QuestUICanvas.GetComponent<QuestUi>();
+            QuestDialog = QuestDialogCanvas.GetComponent<QuestDialog>();
+            PauseMenu = PauseMenuCanvas.GetComponent<PauseMenu>();
+            ConfirmMenu = ConfirmMenuCanvas.GetComponent<ConfirmMenu>();
+
+            QuestDialogCanvas.gameObject.SetActive(false);
+            PauseMenuCanvas.gameObject.SetActive(false);
+            ConfirmMenuCanvas.gameObject.SetActive(false);
+            ResourceUICanvas.gameObject.SetActive(true);
+            QuestUICanvas.gameObject.SetActive(true);
 
             Instance = this;
+        }
+
+        private void Start()
+        {
+            if(Game.Instance.GameData.IsPaused)
+            {
+                PauseMenuCanvas.gameObject.SetActive(true);
+            }
         }
 
         public void LoadQuest(Quest quest)

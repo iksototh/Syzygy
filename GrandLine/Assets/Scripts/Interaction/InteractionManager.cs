@@ -1,8 +1,7 @@
-﻿using GrandLine.Interaction;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace GrandLine.Assets.Scripts.Interaction
+namespace GrandLine.Interaction
 {
     public class InteractionManager : MonoBehaviour
     {

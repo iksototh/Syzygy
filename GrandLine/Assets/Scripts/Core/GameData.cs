@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GrandLine.Systems.Savegame;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ namespace GrandLine.Core
         private bool _paused = false;
         public List<Guid> ActiveQuests = new List<Guid>();
         public List<Guid> CompletedQuests = new List<Guid>();
-
+        
         public bool IsPaused => _paused;
 
         public void Pause()

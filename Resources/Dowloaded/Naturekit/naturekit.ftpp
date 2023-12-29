@@ -1,0 +1,616 @@
+{
+  "meta": {
+    "version": "0.6.7"
+  },
+  "savePath": "H:\\Kod\\Spel\\Syzygy\\Resources\\Dowloaded\\Naturekit",
+  "images": [
+    {
+      "name": "ground_grass_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_grass_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_grass_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_grass_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_grass_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_grass_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_grass_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_grass_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathBendBank_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathBendBank_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathBendBank_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathBendBank_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathBendBank_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathBendBank_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathBendBank_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathBendBank_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathBend_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathBend_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathBend_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathBend_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathBend_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathBend_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathBend_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathBend_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCornerSmall_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCornerSmall_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCornerSmall_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCornerSmall_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCornerSmall_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCornerSmall_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCornerSmall_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCornerSmall_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCorner_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCorner_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCorner_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCorner_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCorner_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCorner_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCorner_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCorner_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCross_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCross_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCross_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCross_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCross_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCross_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathCross_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathCross_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathEndClosed_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathEndClosed_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathEndClosed_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathEndClosed_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathEndClosed_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathEndClosed_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathEndClosed_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathEndClosed_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathEnd_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathEnd_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathEnd_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathEnd_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathEnd_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathEnd_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathEnd_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathEnd_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathOpen_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathOpen_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathOpen_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathOpen_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathOpen_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathOpen_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathOpen_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathOpen_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathRocks_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathRocks_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathRocks_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathRocks_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathRocks_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathRocks_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathRocks_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathRocks_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSideOpen_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSideOpen_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSideOpen_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSideOpen_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSideOpen_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSideOpen_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSideOpen_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSideOpen_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSide_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSide_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSide_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSide_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSide_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSide_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSide_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSide_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSplit_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSplit_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSplit_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSplit_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSplit_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSplit_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathSplit_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathSplit_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathStraight_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathStraight_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathStraight_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathStraight_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathStraight_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathStraight_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathStraight_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathStraight_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathTile_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathTile_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathTile_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathTile_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathTile_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathTile_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_pathTile_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_pathTile_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverBendBank_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverBendBank_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverBendBank_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverBendBank_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverBendBank_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverBendBank_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverBendBank_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverBendBank_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverBend_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverBend_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverBend_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverBend_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverBend_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverBend_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverBend_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverBend_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCornerSmall_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCornerSmall_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCornerSmall_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCornerSmall_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCornerSmall_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCornerSmall_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCornerSmall_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCornerSmall_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCorner_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCorner_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCorner_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCorner_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCorner_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCorner_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCorner_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCorner_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCross_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCross_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCross_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCross_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCross_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCross_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverCross_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverCross_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverEndClosed_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverEndClosed_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverEndClosed_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverEndClosed_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverEndClosed_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverEndClosed_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverEndClosed_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverEndClosed_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverEnd_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverEnd_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverEnd_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverEnd_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverEnd_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverEnd_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverEnd_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverEnd_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverOpen_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverOpen_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverOpen_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverOpen_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverOpen_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverOpen_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverOpen_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverOpen_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverRocks_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverRocks_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverRocks_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverRocks_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverRocks_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverRocks_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverRocks_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverRocks_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSideOpen_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSideOpen_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSideOpen_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSideOpen_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSideOpen_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSideOpen_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSideOpen_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSideOpen_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSide_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSide_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSide_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSide_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSide_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSide_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSide_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSide_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSplit_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSplit_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSplit_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSplit_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSplit_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSplit_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverSplit_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverSplit_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverStraight_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverStraight_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverStraight_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverStraight_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverStraight_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverStraight_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverStraight_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverStraight_SW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverTile_NE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverTile_NE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverTile_NW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverTile_NW.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverTile_SE.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverTile_SE.png",
+      "folder": ""
+    },
+    {
+      "name": "ground_riverTile_SW.png",
+      "path": "H:/Kod/Spel/Syzygy/Resources/Dowloaded/Naturekit/Isometric/ground_riverTile_SW.png",
+      "folder": ""
+    }
+  ],
+  "folders": [],
+  "packOptions": {
+    "textureName": "texture",
+    "textureFormat": "png",
+    "removeFileExtension": false,
+    "prependFolderName": true,
+    "base64Export": false,
+    "tinify": false,
+    "tinifyKey": "",
+    "scale": 1,
+    "filter": "none",
+    "exporter": "JSON (hash)",
+    "fileName": "pack-result",
+    "savePath": "H:\\Kod\\Spel\\Syzygy\\Resources\\Dowloaded\\Naturekit",
+    "width": 2048,
+    "height": 2048,
+    "fixedSize": false,
+    "powerOfTwo": false,
+    "padding": 0,
+    "extrude": 0,
+    "allowRotation": false,
+    "allowTrim": true,
+    "trimMode": "trim",
+    "alphaThreshold": "0",
+    "detectIdentical": true,
+    "packer": "MaxRectsBin",
+    "packerMethod": "BestShortSideFit"
+  }
+}
