@@ -62,7 +62,7 @@ namespace GrandLine.Quests
                 Debug.Log("No more quests currently");
                 return;
             }
-
+            Debug.Log("Loading quest here");
             UIManager.Instance.LoadQuest(quest);
         }
 

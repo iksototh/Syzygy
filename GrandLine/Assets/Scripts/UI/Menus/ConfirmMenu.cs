@@ -25,7 +25,6 @@ namespace GrandLine.UI.Menus
 
         private void Enter()
         {
-            Debug.Log("Enter");
             gameObject.SetActive(false);
             EnterAction();
         }

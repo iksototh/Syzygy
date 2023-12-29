@@ -49,6 +49,12 @@ namespace GrandLine
 
             EncounterManager = EncounterManager.Create();
             QuestManager = QuestManager.Create();
+
+            // Load resources
+            if(GameData.Continue)
+            {
+                SavegameManager.Load();
+            }
         }
 
         private void Start()

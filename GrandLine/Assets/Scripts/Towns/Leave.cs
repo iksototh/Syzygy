@@ -1,4 +1,5 @@
 ﻿using GrandLine.Interaction;
+using GrandLine.Scenes;
 using GrandLine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,7 +16,7 @@ namespace GrandLine.Assets.Scripts.Towns
 
         void OnEnter() 
         {
-            SceneManager.LoadScene("World");
+            SceneLoader.LoadWorld();
         }
     }
 }

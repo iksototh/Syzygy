@@ -19,8 +19,6 @@ namespace GrandLine.ResourceSystem
 
             EventManager.AddListener(EventTypes.QuestCompleted, OnQuestCompleted);
             EventManager.AddListener(EventTypes.PlantHarvested, OnPlantHarvested);
-
-            
         }
 
         public object Save()

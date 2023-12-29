@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using GrandLine;
+using GrandLine.Scenes;
 
 namespace GrandLine.UI.Menus
 {
@@ -36,7 +37,7 @@ namespace GrandLine.UI.Menus
         private void OnLeave()
         {
             Game.Instance.TownManager.SceneData.Continue = true;
-            SceneManager.LoadScene("World");
+            SceneLoader.LoadWorld();
         }
 
         void Start()
@@ -51,7 +52,7 @@ namespace GrandLine.UI.Menus
         {
             Game.Instance.TownManager.SceneData.Continue = false;
 
-            SceneManager.LoadScene("Start");
+            SceneLoader.LoadMainMenu();
         }
 
         void Update()

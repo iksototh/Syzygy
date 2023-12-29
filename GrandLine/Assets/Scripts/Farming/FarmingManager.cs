@@ -36,7 +36,7 @@ namespace GrandLine.Farming
 
         private void Start()
         {
-            ResourceManager.Instance.AddResourceAmount("dirt", 20);
+            // ResourceManager.Instance.AddResourceAmount("dirt", 20);
         }
 
         private bool _placeDirt = false;

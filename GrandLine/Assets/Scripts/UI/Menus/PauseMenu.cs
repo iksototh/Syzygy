@@ -1,3 +1,4 @@
+using GrandLine.Scenes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -28,7 +29,7 @@ namespace GrandLine.UI.Menus
 
         private void OnQuitHandler()
         {
-            SceneManager.LoadScene("Start");
+            SceneLoader.LoadMainMenu();
         }
 
         public void OnPauseOrResumeHandler()

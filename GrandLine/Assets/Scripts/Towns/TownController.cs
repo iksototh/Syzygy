@@ -1,4 +1,5 @@
 ﻿using GrandLine.Events;
+using GrandLine.Scenes;
 using GrandLine.UI;
 using System;
 using UnityEngine;
@@ -25,9 +26,7 @@ namespace GrandLine.Towns
 
         private void OnEnter()
         {
-            Debug.Log("Enter");
-            Game.Instance.SavegameManager.Save();
-            SceneManager.LoadScene("Hideout");
+            SceneLoader.LoadHideout();
         }
     }
 }

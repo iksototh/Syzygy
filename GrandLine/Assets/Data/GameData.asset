@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   Continue: 0
+  GameState:
+    ships: []

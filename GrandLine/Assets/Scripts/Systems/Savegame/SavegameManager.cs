@@ -33,13 +33,14 @@ namespace GrandLine.Systems.Savegame
 
             gameState.resourceStore = ResourceManager.Instance.Save();
             gameState.questStore = Game.Instance.QuestManager.Save();
-
+            Game.Instance.GameData.GameState = gameState;
             var file = Path.Combine(Application.persistentDataPath, fileName);
             var jsonData = JsonConvert.SerializeObject(gameState, new JsonSerializerSettings
             {
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             });
             File.WriteAllText(file, jsonData);
+            Debug.Log("saved");
         }
 
         public void Load(string fileName = "savefile1.save")
@@ -49,7 +50,9 @@ namespace GrandLine.Systems.Savegame
             var gameState = JsonConvert.DeserializeObject<GameState>(saveData);
             ResourceManager.Instance.Load(gameState.resourceStore);
             Game.Instance.QuestManager.Load(gameState.questStore);
+            Game.Instance.GameData.GameState = gameState;
             // Game.GameManager.LoadGame(gameState);
+            Debug.Log("loaded");
         }
 
         public void AddSaveable(Func<ShipState> func)

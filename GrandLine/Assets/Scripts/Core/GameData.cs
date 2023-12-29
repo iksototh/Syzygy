@@ -12,7 +12,9 @@ namespace GrandLine.Core
         private bool _paused = false;
         public List<Guid> ActiveQuests = new List<Guid>();
         public List<Guid> CompletedQuests = new List<Guid>();
-        
+
+        public GameState GameState;
+
         public bool IsPaused => _paused;
 
         public void Pause()

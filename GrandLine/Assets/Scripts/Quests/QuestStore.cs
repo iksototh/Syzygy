@@ -76,7 +76,14 @@ namespace GrandLine.Quests
 
         public IEnumerable<Quest> GetAvailableQuestsOfType(string type)
         {
-            return _allQuests.Where(quest => quest.Type == type && !GetCompletedQuests().Contains(quest) && !GetActiveQuests().Contains(quest));
+            return _allQuests.Where(quest => quest.Type == type && !IsCompletedQuest(quest) && !IsActiveQuest(quest));
+        }
+
+        private bool IsActiveQuest(Quest quest)
+        {
+            var activeQuests = GetActiveQuests();
+            var isActiveQuest = activeQuests.Any(q => q.Id == quest.Id);
+            return isActiveQuest;
         }
 
         public IEnumerable<Quest> GetActiveQuests()
@@ -84,9 +91,17 @@ namespace GrandLine.Quests
             return _questDict[QuestLists.Active];
         }
 
+        private bool IsCompletedQuest(Quest quest)
+        {
+            var completedQuests = GetCompletedQuests();
+            var isCompletedQuest = completedQuests.Any(q => q.Id == quest.Id);
+            return isCompletedQuest;
+        }
+
         public IEnumerable<Quest> GetCompletedQuests()
         {
-            return _questDict[QuestLists.Completed];
+            var completedQuests = _questDict[QuestLists.Completed];
+            return completedQuests;
         }
 
         public void CompleteQuest(string questId)
