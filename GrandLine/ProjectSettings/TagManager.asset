@@ -44,20 +44,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
-  - name: World
+  - name: Background
     uniqueID: 826269573
     locked: 0
-  - name: GroundDecals
-    uniqueID: 4282284387
-    locked: 0
-  - name: Characters
-    uniqueID: 1736338125
-    locked: 0
-  - name: Decals
-    uniqueID: 572430613
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Overlay
     uniqueID: 266764267

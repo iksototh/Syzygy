@@ -1,0 +1,23 @@
+version: 2
+tpsheetFileNames:
+- Assets/Sprites/Kennys/Naturekit/naturekitall-0.tpsheet
+- Assets/Sprites/Kennys/Naturekit/naturekitall-1.tpsheet
+- Assets/Sprites/Kennys/Pirates/piratekitall-0.tpsheet
+- Assets/Sprites/Kennys/Pirates/piratekitall-1.tpsheet
+- Assets/Sprites/Kennys/Pirates/piratekitall-2.tpsheet
+- Assets/Sprites/Kennys/Pirates/piratekitall-3.tpsheet
+textureFileNames:
+- Assets/Sprites/Kennys/Naturekit/naturekitall-0.png
+- Assets/Sprites/Kennys/Naturekit/naturekitall-1.png
+- Assets/Sprites/Kennys/Pirates/piratekitall-0.png
+- Assets/Sprites/Kennys/Pirates/piratekitall-1.png
+- Assets/Sprites/Kennys/Pirates/piratekitall-2.png
+- Assets/Sprites/Kennys/Pirates/piratekitall-3.png
+normalmapFileNames:
+- 
+- 
+- 
+- 
+- 
+- 
+enableDebugOutput: 0

@@ -1,0 +1,66 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://assetstore.unity.com/packages/tools/sprite-management/texturepacker-importer-16641
+#
+# created with Free texture packer v0.6.7
+# http://free-tex-packer.com
+#
+:format=40300
+:texture=piratekitall-2.png
+:size=2048x2048
+:pivotpoints=disabled
+:borders=disabled
+
+ship_dark_NW.png;0;1382;717;666; 0.5;0.5; 0;0;0;0
+ship_light_NW.png;717;1382;717;666; 0.5;0.5; 0;0;0;0
+tower_NE.png;1434;1554;377;494; 0.5;0.5; 0;0;0;0
+palm_detailed_short_SW.png;1811;1874;165;174; 0.5;0.5; 0;0;0;0
+cannon_SW.png;1976;1988;68;60; 0.5;0.5; 0;0;0;0
+pirate_captain_N.png;1976;1881;67;107; 0.5;0.5; 0;0;0;0
+pirate_captain_S.png;1976;1780;67;101; 0.5;0.5; 0;0;0;0
+palm_detailed_short_NE.png;1811;1701;165;173; 0.5;0.5; 0;0;0;0
+pirate_officer_N.png;1976;1680;67;100; 0.5;0.5; 0;0;0;0
+formation_stone_SE.png;1811;1551;131;150; 0.5;0.5; 0;0;0;0
+tower_SE.png;1434;1078;377;476; 0.5;0.5; 0;0;0;0
+paddle_SW.png;1942;1618;83;62; 0.5;0.5; 0;0;0;0
+shovel_SW.png;1942;1560;78;58; 0.5;0.5; 0;0;0;0
+shovel_NE.png;1942;1503;78;57; 0.5;0.5; 0;0;0;0
+palm_long_SE.png;1811;1355;130;196; 0.5;0.5; 0;0;0;0
+shovel_NW.png;1941;1446;78;57; 0.5;0.5; 0;0;0;0
+shovel_SE.png;1941;1389;77;57; 0.5;0.5; 0;0;0;0
+pirate_crew_S.png;1941;1294;67;95; 0.5;0.5; 0;0;0;0
+palm_long_NE.png;1811;1160;130;195; 0.5;0.5; 0;0;0;0
+pirate_crew_N.png;1941;1201;67;93; 0.5;0.5; 0;0;0;0
+plant_NW.png;1941;1142;67;59; 0.5;0.5; 0;0;0;0
+palm_long_NW.png;1811;965;130;195; 0.5;0.5; 0;0;0;0
+plant_SE.png;1941;1083;67;59; 0.5;0.5; 0;0;0;0
+pirate_captain_NE.png;1941;975;62;108; 0.5;0.5; 0;0;0;0
+pirate_crew_NE.png;1941;871;62;104; 0.5;0.5; 0;0;0;0
+ship_dark_NE.png;0;206;710;665; 0.5;0.5; 0;0;0;0
+ship_wreck_NW.png;710;737;717;645; 0.5;0.5; 0;0;0;0
+ship_wreck_SE.png;710;122;716;615; 0.5;0.5; 0;0;0;0
+palm_long_SW.png;0;11;130;195; 0.5;0.5; 0;0;0;0
+pirate_captain_NW.png;130;14;61;108; 0.5;0.5; 0;0;0;0
+pirate_officer_NW.png;191;14;61;108; 0.5;0.5; 0;0;0;0
+pirate_officer_SE.png;252;18;62;104; 0.5;0.5; 0;0;0;0
+pirate_crew_NW.png;314;18;61;104; 0.5;0.5; 0;0;0;0
+pirate_crew_SE.png;375;19;62;103; 0.5;0.5; 0;0;0;0
+pirate_crew_SW.png;437;19;61;103; 0.5;0.5; 0;0;0;0
+pirate_officer_NE.png;498;20;62;102; 0.5;0.5; 0;0;0;0
+palm_short_NW.png;560;44;130;162; 0.5;0.5; 0;0;0;0
+tower_NW.png;1427;601;358;477; 0.5;0.5; 0;0;0;0
+palm_short_SE.png;1785;803;130;162; 0.5;0.5; 0;0;0;0
+palm_short_SW.png;1915;709;130;162; 0.5;0.5; 0;0;0;0
+palm_short_NE.png;1785;642;130;161; 0.5;0.5; 0;0;0;0
+formation_rock_SE.png;1915;566;130;143; 0.5;0.5; 0;0;0;0
+formation_stone_NE.png;1785;499;130;143; 0.5;0.5; 0;0;0;0
+formationLarge_rock_SE.png;1915;404;126;162; 0.5;0.5; 0;0;0;0
+formationLarge_stone_NE.png;1426;439;126;162; 0.5;0.5; 0;0;0;0
+formation_rock_NW.png;1552;448;126;153; 0.5;0.5; 0;0;0;0
+formation_stone_SW.png;1678;346;126;153; 0.5;0.5; 0;0;0;0
+formation_rock_SW.png;1552;307;126;141; 0.5;0.5; 0;0;0;0
+formation_stone_NW.png;1426;298;126;141; 0.5;0.5; 0;0;0;0
+formationLarge_rock_NE.png;1804;237;125;167; 0.5;0.5; 0;0;0;0
+formationLarge_stone_SE.png;1678;179;125;167; 0.5;0.5; 0;0;0;0

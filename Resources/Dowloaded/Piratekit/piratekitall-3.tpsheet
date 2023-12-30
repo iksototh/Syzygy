@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://assetstore.unity.com/packages/tools/sprite-management/texturepacker-importer-16641
+#
+# created with Free texture packer v0.6.7
+# http://free-tex-packer.com
+#
+:format=40300
+:texture=piratekitall-3.png
+:size=2048x1024
+:pivotpoints=enabled
+:borders=disabled
+
+ship_light_NE.png;0;359;710;665; 0.5;0.5; 0;0;0;0
+ship_wreck_NE.png;710;379;710;645; 0.5;0.5; 0;0;0;0

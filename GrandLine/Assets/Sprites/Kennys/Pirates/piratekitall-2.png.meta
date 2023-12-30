@@ -1,0 +1,1249 @@
+fileFormatVersion: 2
+guid: fe1a12a4b23be2843a0838d502e4ef8d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cannon_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 1988
+        width: 68
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d6e7dc15d48de4391504f89b736f6f
+      internalID: -91234557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formation_rock_NW.png
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 448
+        width: 126
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb083fd2c292784cafe2cdc5fa70693
+      internalID: 2000762323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formation_rock_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 566
+        width: 130
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43099f1718472034bbe732d709cf1f72
+      internalID: -762542718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formation_rock_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 307
+        width: 126
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656e5f639260ebe4bba8546cc1f58356
+      internalID: -1009480084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formation_stone_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 499
+        width: 130
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a10d1e2085b1d5459db39762fdbf132
+      internalID: 2110309982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formation_stone_NW.png
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 298
+        width: 126
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f61d7195908d9a409232e3f20b1dad8
+      internalID: 1510880738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formation_stone_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1551
+        width: 131
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6ef49c412159e45bcf7e3d4285b26a
+      internalID: -2141298064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formation_stone_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 346
+        width: 126
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d337b155a59f23644a2670a13befae25
+      internalID: -1477605164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formationLarge_rock_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 237
+        width: 125
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38d80a11fe871c418eff1e07cb281b4
+      internalID: 1393397797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formationLarge_rock_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 404
+        width: 126
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cad748b2e55a0408e8e413957915d4
+      internalID: -328899251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formationLarge_stone_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 439
+        width: 126
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e039e4219455742a0332ea5cd48709
+      internalID: 57706511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formationLarge_stone_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 179
+        width: 125
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c421af9d6761da5459b2e102bbe53ee3
+      internalID: 515661552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 1618
+        width: 83
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28f518b71bbb38488aae16ed2c764b3
+      internalID: -62166740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palm_detailed_short_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1701
+        width: 165
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db4966507085a24e93964c9cf9d87fd
+      internalID: -559619814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palm_detailed_short_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1874
+        width: 165
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f050eb9d052ecf4696cf1b7cd7d96f9
+      internalID: 1268372072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palm_long_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1160
+        width: 130
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149ba4db339c45d46b661d0261cf9548
+      internalID: 393044742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palm_long_NW.png
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 965
+        width: 130
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc7c4e1db59edf41971b8692b02ee9f
+      internalID: 1453314113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palm_long_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1355
+        width: 130
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e4e86eb53c6c143975e40003adacd4
+      internalID: -1127168604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palm_long_SW.png
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11
+        width: 130
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76f75f3b60fdcc439e9153e58acc2ab
+      internalID: -1806218981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palm_short_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 642
+        width: 130
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f5f73ca196f844687bf970090ec511
+      internalID: 1669580560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palm_short_NW.png
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 44
+        width: 130
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8240e5749d9fa7a4c82b899de32a599d
+      internalID: 1968762851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palm_short_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 803
+        width: 130
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4cf9dcfe693244c85e0d261ede1267
+      internalID: 1913866300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palm_short_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 709
+        width: 130
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525d798624a2a6e4eb92f28f3f2b24b7
+      internalID: -103233578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_captain_N.png
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 1881
+        width: 67
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73e5c7c637d54c4197744a553860a80
+      internalID: -970683848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_captain_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 975
+        width: 62
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26585eb1e593c042bed9167c40b994f
+      internalID: -600487740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_captain_NW.png
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 14
+        width: 61
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed6b3e3560a5534c863f0b983021dc0
+      internalID: -890027951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_captain_S.png
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 1780
+        width: 67
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3090c76c7c5d6a4d8d93c751dc8d8fa
+      internalID: -1302989203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_crew_N.png
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 1201
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0ee2fbdc861f245b39cbfe80c05204
+      internalID: -1729406734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_crew_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 871
+        width: 62
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1768c0a8f688286479a6bfb4c9b12b33
+      internalID: -1353945979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_crew_NW.png
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 18
+        width: 61
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfd519eb64e3fa458edf68d10d92163
+      internalID: -1691010739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_crew_S.png
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 1294
+        width: 67
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee437299a4a1c94b945b19b35cf298d
+      internalID: -902594260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_crew_SE.png
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 19
+        width: 62
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c69c78ffc790784a81c36ff11dd8236
+      internalID: -557815072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_crew_SW.png
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 19
+        width: 61
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba26c2136645a54ea6a0da34b49e936
+      internalID: 1503619743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_officer_N.png
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 1680
+        width: 67
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6eb5d4427c0a74493ad243da312b99
+      internalID: -195257806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_officer_NE.png
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 20
+        width: 62
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1af51c4d488b5489996ff7909cdbb3
+      internalID: -992038067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_officer_NW.png
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 14
+        width: 61
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e826eb555269689479e3d99e60a30a48
+      internalID: 371775590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_officer_SE.png
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 18
+        width: 62
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5be557f99b29d4a979340a92b41b0d
+      internalID: -1761274021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plant_NW.png
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 1142
+        width: 67
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d695ca437e21345a20b992fe5b7715
+      internalID: -1183509564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plant_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 1083
+        width: 67
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e3248cbbb197f48bbfb96f17394416
+      internalID: 956227316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_dark_NE.png
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 206
+        width: 710
+        height: 665
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acce8d8081db54d4ea38b35d458a3ec3
+      internalID: -833542824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_dark_NW.png
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1382
+        width: 717
+        height: 666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d0c65b9322287438ad0c354ce11dc0
+      internalID: -1613021220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_light_NW.png
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 1382
+        width: 717
+        height: 666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c4e3efc563b224087592577afae5f2
+      internalID: 1280454779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_wreck_NW.png
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 737
+        width: 717
+        height: 645
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fcd9025a9558294caaa770c5161cc6f
+      internalID: -1145255546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_wreck_SE.png
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 122
+        width: 716
+        height: 615
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a6aabb4208e8084e96e174343f9ef84
+      internalID: -188385064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shovel_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 1503
+        width: 78
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35aa8c7e4ef9cc4c9c4f64ede4641ed
+      internalID: -2033894938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shovel_NW.png
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 1446
+        width: 78
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90d8b6f5f107674a96bbab57e190d3a
+      internalID: -1834028364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shovel_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 1389
+        width: 77
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbec9738482b8d4d9fcf678e4e04370
+      internalID: -2103380979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shovel_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 1560
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c6f48b31b7b24439a860f8093d9e10
+      internalID: -561773670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tower_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 1554
+        width: 377
+        height: 494
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738254c38a80cdf4bb24b689e4cf2750
+      internalID: -2086893886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tower_NW.png
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 601
+        width: 358
+        height: 477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b356432495df4749bf75d3a8b24bdaf
+      internalID: -1057323686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tower_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 1078
+        width: 377
+        height: 476
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32994ce08cb5e8a4bb303d05e175ebea
+      internalID: 103577350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6c31655fdb784624b9dcb4670979253f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cannon_SW.png: -91234557
+      formationLarge_rock_NE.png: 1393397797
+      formationLarge_rock_SE.png: -328899251
+      formationLarge_stone_NE.png: 57706511
+      formationLarge_stone_SE.png: 515661552
+      formation_rock_NW.png: 2000762323
+      formation_rock_SE.png: -762542718
+      formation_rock_SW.png: -1009480084
+      formation_stone_NE.png: 2110309982
+      formation_stone_NW.png: 1510880738
+      formation_stone_SE.png: -2141298064
+      formation_stone_SW.png: -1477605164
+      paddle_SW.png: -62166740
+      palm_detailed_short_NE.png: -559619814
+      palm_detailed_short_SW.png: 1268372072
+      palm_long_NE.png: 393044742
+      palm_long_NW.png: 1453314113
+      palm_long_SE.png: -1127168604
+      palm_long_SW.png: -1806218981
+      palm_short_NE.png: 1669580560
+      palm_short_NW.png: 1968762851
+      palm_short_SE.png: 1913866300
+      palm_short_SW.png: -103233578
+      pirate_captain_N.png: -970683848
+      pirate_captain_NE.png: -600487740
+      pirate_captain_NW.png: -890027951
+      pirate_captain_S.png: -1302989203
+      pirate_crew_N.png: -1729406734
+      pirate_crew_NE.png: -1353945979
+      pirate_crew_NW.png: -1691010739
+      pirate_crew_S.png: -902594260
+      pirate_crew_SE.png: -557815072
+      pirate_crew_SW.png: 1503619743
+      pirate_officer_N.png: -195257806
+      pirate_officer_NE.png: -992038067
+      pirate_officer_NW.png: 371775590
+      pirate_officer_SE.png: -1761274021
+      plant_NW.png: -1183509564
+      plant_SE.png: 956227316
+      ship_dark_NE.png: -833542824
+      ship_dark_NW.png: -1613021220
+      ship_light_NW.png: 1280454779
+      ship_wreck_NW.png: -1145255546
+      ship_wreck_SE.png: -188385064
+      shovel_NE.png: -2033894938
+      shovel_NW.png: -1834028364
+      shovel_SE.png: -2103380979
+      shovel_SW.png: -561773670
+      tower_NE.png: -2086893886
+      tower_NW.png: -1057323686
+      tower_SE.png: 103577350
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,131 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://assetstore.unity.com/packages/tools/sprite-management/texturepacker-importer-16641
+#
+# created with Free texture packer v0.6.7
+# http://free-tex-packer.com
+#
+:format=40300
+:texture=texture.png
+:size=1950x520
+:pivotpoints=enabled
+:borders=disabled
+
+ground_pathCornerSmall_NW.png;0;451;130;69; 0.5;0.5; 0;0;0;0
+ground_pathCorner_NE.png;130;451;130;69; 0.5;0.5; 0;0;0;0
+ground_pathSideOpen_NE.png;260;451;130;69; 0.5;0.5; 0;0;0;0
+ground_pathSideOpen_NW.png;390;451;130;69; 0.5;0.5; 0;0;0;0
+ground_pathSide_NE.png;520;451;130;69; 0.5;0.5; 0;0;0;0
+ground_pathSide_NW.png;650;451;130;69; 0.5;0.5; 0;0;0;0
+ground_riverCornerSmall_NW.png;780;451;130;69; 0.5;0.5; 0;0;0;0
+ground_riverCorner_NE.png;910;451;130;69; 0.5;0.5; 0;0;0;0
+ground_riverSideOpen_NE.png;1040;451;130;69; 0.5;0.5; 0;0;0;0
+ground_riverSideOpen_NW.png;1170;451;130;69; 0.5;0.5; 0;0;0;0
+ground_riverSide_NE.png;1300;451;130;69; 0.5;0.5; 0;0;0;0
+ground_riverSide_NW.png;1430;451;130;69; 0.5;0.5; 0;0;0;0
+ground_grass_NE.png;1560;455;130;65; 0.5;0.5; 0;0;0;0
+ground_pathBendBank_NE.png;1690;455;130;65; 0.5;0.5; 0;0;0;0
+ground_pathBendBank_NW.png;1820;455;130;65; 0.5;0.5; 0;0;0;0
+ground_pathBendBank_SE.png;1560;390;130;65; 0.5;0.5; 0;0;0;0
+ground_pathBendBank_SW.png;1690;390;130;65; 0.5;0.5; 0;0;0;0
+ground_pathBend_NE.png;1820;390;130;65; 0.5;0.5; 0;0;0;0
+ground_pathBend_NW.png;0;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathBend_SE.png;130;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathBend_SW.png;260;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathCornerSmall_NE.png;390;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathCornerSmall_SW.png;520;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathCorner_NW.png;650;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathCorner_SE.png;780;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathCross_NE.png;910;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathCross_NW.png;1040;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathCross_SE.png;1170;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathCross_SW.png;1300;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathEndClosed_NE.png;1430;386;130;65; 0.5;0.5; 0;0;0;0
+ground_pathEndClosed_NW.png;1560;325;130;65; 0.5;0.5; 0;0;0;0
+ground_pathEndClosed_SE.png;1690;325;130;65; 0.5;0.5; 0;0;0;0
+ground_pathEndClosed_SW.png;1820;325;130;65; 0.5;0.5; 0;0;0;0
+ground_pathEnd_NE.png;0;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathEnd_NW.png;130;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathEnd_SE.png;260;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathEnd_SW.png;390;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathOpen_NE.png;520;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathOpen_NW.png;650;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathOpen_SE.png;780;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathOpen_SW.png;910;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathRocks_NE.png;1040;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathRocks_NW.png;1170;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathRocks_SE.png;1300;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathRocks_SW.png;1430;321;130;65; 0.5;0.5; 0;0;0;0
+ground_pathSplit_NE.png;1560;260;130;65; 0.5;0.5; 0;0;0;0
+ground_pathSplit_NW.png;1690;260;130;65; 0.5;0.5; 0;0;0;0
+ground_pathSplit_SE.png;1820;260;130;65; 0.5;0.5; 0;0;0;0
+ground_pathSplit_SW.png;0;256;130;65; 0.5;0.5; 0;0;0;0
+ground_pathStraight_NE.png;130;256;130;65; 0.5;0.5; 0;0;0;0
+ground_pathStraight_NW.png;260;256;130;65; 0.5;0.5; 0;0;0;0
+ground_pathStraight_SE.png;390;256;130;65; 0.5;0.5; 0;0;0;0
+ground_pathStraight_SW.png;520;256;130;65; 0.5;0.5; 0;0;0;0
+ground_pathTile_NE.png;650;256;130;65; 0.5;0.5; 0;0;0;0
+ground_pathTile_NW.png;780;256;130;65; 0.5;0.5; 0;0;0;0
+ground_pathTile_SE.png;910;256;130;65; 0.5;0.5; 0;0;0;0
+ground_pathTile_SW.png;1040;256;130;65; 0.5;0.5; 0;0;0;0
+ground_riverBendBank_NE.png;1170;256;130;65; 0.5;0.5; 0;0;0;0
+ground_riverBendBank_NW.png;1300;256;130;65; 0.5;0.5; 0;0;0;0
+ground_riverBendBank_SE.png;1430;256;130;65; 0.5;0.5; 0;0;0;0
+ground_riverBendBank_SW.png;1560;195;130;65; 0.5;0.5; 0;0;0;0
+ground_riverBend_NE.png;1690;195;130;65; 0.5;0.5; 0;0;0;0
+ground_riverBend_NW.png;1820;195;130;65; 0.5;0.5; 0;0;0;0
+ground_riverBend_SE.png;0;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverBend_SW.png;130;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverCornerSmall_NE.png;260;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverCornerSmall_SW.png;390;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverCorner_NW.png;520;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverCorner_SE.png;650;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverCross_NE.png;780;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverCross_NW.png;910;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverCross_SE.png;1040;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverCross_SW.png;1170;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverEndClosed_NE.png;1300;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverEndClosed_NW.png;1430;191;130;65; 0.5;0.5; 0;0;0;0
+ground_riverEndClosed_SE.png;1560;130;130;65; 0.5;0.5; 0;0;0;0
+ground_riverEndClosed_SW.png;1690;130;130;65; 0.5;0.5; 0;0;0;0
+ground_riverEnd_NE.png;1820;130;130;65; 0.5;0.5; 0;0;0;0
+ground_riverEnd_NW.png;0;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverEnd_SE.png;130;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverEnd_SW.png;260;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverOpen_NE.png;390;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverOpen_NW.png;520;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverOpen_SE.png;650;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverOpen_SW.png;780;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverRocks_NE.png;910;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverRocks_NW.png;1040;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverRocks_SE.png;1170;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverRocks_SW.png;1300;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverSplit_NE.png;1430;126;130;65; 0.5;0.5; 0;0;0;0
+ground_riverSplit_NW.png;1560;65;130;65; 0.5;0.5; 0;0;0;0
+ground_riverSplit_SE.png;1690;65;130;65; 0.5;0.5; 0;0;0;0
+ground_riverSplit_SW.png;1820;65;130;65; 0.5;0.5; 0;0;0;0
+ground_riverStraight_NE.png;0;61;130;65; 0.5;0.5; 0;0;0;0
+ground_riverStraight_NW.png;130;61;130;65; 0.5;0.5; 0;0;0;0
+ground_riverStraight_SE.png;260;61;130;65; 0.5;0.5; 0;0;0;0
+ground_riverStraight_SW.png;390;61;130;65; 0.5;0.5; 0;0;0;0
+ground_riverTile_NE.png;520;61;130;65; 0.5;0.5; 0;0;0;0
+ground_riverTile_NW.png;650;61;130;65; 0.5;0.5; 0;0;0;0
+ground_riverTile_SE.png;780;61;130;65; 0.5;0.5; 0;0;0;0
+ground_riverTile_SW.png;910;61;130;65; 0.5;0.5; 0;0;0;0
+ground_pathCornerSmall_SE.png;1040;65;130;61; 0.5;0.5; 0;0;0;0
+ground_pathCorner_SW.png;1170;65;130;61; 0.5;0.5; 0;0;0;0
+ground_pathSideOpen_SE.png;1300;65;130;61; 0.5;0.5; 0;0;0;0
+ground_pathSideOpen_SW.png;1430;65;130;61; 0.5;0.5; 0;0;0;0
+ground_pathSide_SE.png;1040;4;130;61; 0.5;0.5; 0;0;0;0
+ground_pathSide_SW.png;1170;4;130;61; 0.5;0.5; 0;0;0;0
+ground_riverCornerSmall_SE.png;1300;4;130;61; 0.5;0.5; 0;0;0;0
+ground_riverCorner_SW.png;1430;4;130;61; 0.5;0.5; 0;0;0;0
+ground_riverSideOpen_SE.png;1560;4;130;61; 0.5;0.5; 0;0;0;0
+ground_riverSideOpen_SW.png;1690;4;130;61; 0.5;0.5; 0;0;0;0
+ground_riverSide_SE.png;1820;4;130;61; 0.5;0.5; 0;0;0;0
+ground_riverSide_SW.png;0;0;130;61; 0.5;0.5; 0;0;0;0
+ground_grass_NW.png;1560;455;130;65; 0.5;0.5; 0;0;0;0
+ground_grass_SE.png;1560;455;130;65; 0.5;0.5; 0;0;0;0
+ground_grass_SW.png;1560;455;130;65; 0.5;0.5; 0;0;0;0

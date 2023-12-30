@@ -1,0 +1,67 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://assetstore.unity.com/packages/tools/sprite-management/texturepacker-importer-16641
+#
+# created with Free texture packer v0.6.7
+# http://free-tex-packer.com
+#
+:format=40300
+:texture=piratekitall-1.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+
+ship_light_E.png;0;1443;858;605; 0.5;0.5; 0;0;0;0
+ship_light_W.png;858;1443;858;605; 0.5;0.5; 0;0;0;0
+ship_light_N.png;1716;1353;304;695; 0.5;0.5; 0;0;0;0
+ship_dark_SW.png;0;542;711;811; 0.5;0.5; 0;0;0;0
+boat_small_E.png;0;1359;158;84; 0.5;0.5; 0;0;0;0
+boat_small_W.png;158;1359;158;84; 0.5;0.5; 0;0;0;0
+cannonMobile_SW.png;316;1361;97;82; 0.5;0.5; 0;0;0;0
+cannonMobile_E.png;413;1363;88;80; 0.5;0.5; 0;0;0;0
+cannonMobile_W.png;501;1363;87;80; 0.5;0.5; 0;0;0;0
+chest_NE.png;588;1363;67;80; 0.5;0.5; 0;0;0;0
+chest_NW.png;655;1363;67;80; 0.5;0.5; 0;0;0;0
+ship_wreck_E.png;0;43;853;499; 0.5;0.5; 0;0;0;0
+ship_light_SW.png;711;542;711;811; 0.5;0.5; 0;0;0;0
+ship_wreck_W.png;853;43;853;499; 0.5;0.5; 0;0;0;0
+chest_SE.png;722;1363;67;80; 0.5;0.5; 0;0;0;0
+chest_SW.png;789;1363;67;80; 0.5;0.5; 0;0;0;0
+cannonLarge_SE.png;856;1365;102;78; 0.5;0.5; 0;0;0;0
+cannonMobile_S.png;958;1374;68;69; 0.5;0.5; 0;0;0;0
+plant_NE.png;1026;1378;67;65; 0.5;0.5; 0;0;0;0
+hole_NE.png;1093;1379;99;64; 0.5;0.5; 0;0;0;0
+hole_SE.png;1192;1379;98;64; 0.5;0.5; 0;0;0;0
+plant_SW.png;1290;1379;67;64; 0.5;0.5; 0;0;0;0
+paddle_NW.png;1357;1381;84;62; 0.5;0.5; 0;0;0;0
+ship_wreck_N.png;1706;676;304;677; 0.5;0.5; 0;0;0;0
+boat_large_SE.png;1422;542;175;134; 0.5;0.5; 0;0;0;0
+cannonLarge_NW.png;1597;1339;102;104; 0.5;0.5; 0;0;0;0
+boat_small_SE.png;1441;1324;154;119; 0.5;0.5; 0;0;0;0
+boat_small_N.png;1597;550;96;126; 0.5;0.5; 0;0;0;0
+pirate_crew_E.png;2010;1253;30;100; 0.5;0.5; 0;0;0;0
+pirate_crew_W.png;2010;1153;30;100; 0.5;0.5; 0;0;0;0
+cannonMobile_NE.png;1595;1238;97;101; 0.5;0.5; 0;0;0;0
+palm_detailed_long_SE.png;1422;1116;165;208; 0.5;0.5; 0;0;0;0
+palm_detailed_long_NE.png;1422;909;165;207; 0.5;0.5; 0;0;0;0
+boat_small_SW.png;1693;557;154;119; 0.5;0.5; 0;0;0;0
+cannonMobile_NW.png;1587;1137;97;101; 0.5;0.5; 0;0;0;0
+boat_large_N.png;1587;989;96;148; 0.5;0.5; 0;0;0;0
+boat_large_S.png;1587;844;96;145; 0.5;0.5; 0;0;0;0
+palm_detailed_long_NW.png;1422;702;165;207; 0.5;0.5; 0;0;0;0
+paddle_SE.png;1587;782;84;62; 0.5;0.5; 0;0;0;0
+pirate_officer_S.png;1587;677;67;105; 0.5;0.5; 0;0;0;0
+palm_detailed_long_SW.png;1847;469;165;207; 0.5;0.5; 0;0;0;0
+formationLarge_rock_SW.png;1706;419;132;138; 0.5;0.5; 0;0;0;0
+formationLarge_stone_NW.png;1706;281;132;138; 0.5;0.5; 0;0;0;0
+palm_detailed_short_NW.png;1838;295;165;174; 0.5;0.5; 0;0;0;0
+palm_detailed_short_SE.png;1838;121;165;174; 0.5;0.5; 0;0;0;0
+formation_rock_NE.png;1706;131;131;150; 0.5;0.5; 0;0;0;0
+pirate_captain_SE.png;1706;7;62;114; 0.5;0.5; 0;0;0;0
+cannonMobile_N.png;1768;30;68;101; 0.5;0.5; 0;0;0;0
+pirate_captain_SW.png;1836;7;61;114; 0.5;0.5; 0;0;0;0
+pirate_officer_SW.png;1897;11;61;110; 0.5;0.5; 0;0;0;0
+paddle_NE.png;1958;59;83;62; 0.5;0.5; 0;0;0;0
+cannon_SE.png;1958;0;68;59; 0.5;0.5; 0;0;0;0

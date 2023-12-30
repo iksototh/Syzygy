@@ -1,0 +1,1249 @@
+fileFormatVersion: 2
+guid: 298785835a41b6648bc19cd0d1ac2c5c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boat_large_E.png
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 548
+        width: 189
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b873b642aedd8dd468915dfedbda1bec
+      internalID: 1795422150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_large_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 56
+        width: 175
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e3b14f71b4c524eb1cf64f56a010cf
+      internalID: -1510909409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_large_NW.png
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 327
+        width: 176
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4831ef7b3e292ce47a8080fc9795ba2e
+      internalID: 1513160101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_large_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 193
+        width: 176
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac9f6b8f13aab74f9347ad7be15fde6
+      internalID: -1782321261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_large_W.png
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 464
+        width: 189
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac0d2e66892cfb4da37b6fea0037e06
+      internalID: 79823892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_small_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 4
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7123c9433f2efe40aa5796588b2935b
+      internalID: -790379310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_small_NW.png
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 4
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbcc22766d80fff469a3cd5ca5f15984
+      internalID: 632691197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_small_S.png
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 2
+        width: 96
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05642e284803dc54d8e76c8c9bf8c35f
+      internalID: 2118430028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle_NE.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 2005
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb7343c55ce74b4181a6896a89421e9
+      internalID: -1480499803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle_NW.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1962
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2228a80b08fa54a479c08229c780dce5
+      internalID: -1711221027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle_SE.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 2005
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e318202fe53db40b9c7d48f0528dec
+      internalID: -561369026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle_SW.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1919
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8258775a7bebd49817517a250abf26
+      internalID: -1418186912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottleLarge_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 9
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d2c47d9c41baa4f8d6cffa3d75baa4
+      internalID: -202559518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottleLarge_NW.png
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 9
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8552d428cb15b34dbd0361b34a54967
+      internalID: 1074248166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottleLarge_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 9
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b5f911413e2d64291ab48d7e89c02b
+      internalID: -1253583977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottleLarge_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 9
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06dba0901a948114cbc4c096f55fbd99
+      internalID: -921426334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon_NE.png
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 2
+        width: 68
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6730af00312258468aa5f50ea1094cf
+      internalID: -790686957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon_NW.png
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 68
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53f3fe44d6fb51438224278da1bddfb
+      internalID: -1502021512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannonBall_NE.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1501
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f5ff263daaff042beea43c617929a9
+      internalID: -1046671235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannonBall_NW.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1486
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3ca8c3f04a02c4bac11915a960e797
+      internalID: 226778378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannonBall_SE.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1471
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c2c4de0e2844b4bafc151c90ebbff5
+      internalID: 1539827652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannonBall_SW.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1456
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1e6afe2f5f6fd4987d6ec1bad6a8b4
+      internalID: -392161519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannonLarge_NE.png
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 528
+        width: 103
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b5e067866d8d2439561ab7865d7742
+      internalID: -310297264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannonLarge_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 450
+        width: 103
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f71a41c1b7c4724db5f764a80bd1f0f
+      internalID: -545498222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannonMobile_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 4
+        width: 97
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd828098f7a7814c8717b2f003341b3
+      internalID: 652075768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formationLarge_rock_NW.png
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 268
+        width: 132
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f929f12e545112643a687344a54909e4
+      internalID: -1763170429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: formationLarge_stone_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 86
+        width: 132
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85a9f16af1829348b1395e71b2e5d36
+      internalID: -830591313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hole_NW.png
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 5
+        width: 87
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c43db5e7f1c34d4ea9fd9134415c67f
+      internalID: 1929994141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hole_SW.png
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 5
+        width: 88
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2e5252a0984b143bcca714c0af5edb
+      internalID: 1038116773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_captain_E.png
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 525
+        width: 44
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ff1c2103e0fd54aba609fab9694b91
+      internalID: 884064617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_captain_W.png
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 418
+        width: 44
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7cf2ae4264d28f40b40b99572c9c218
+      internalID: -734078510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_officer_E.png
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 207
+        width: 33
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b312d1efe353cc4fa7201da9c2fac05
+      internalID: -1668359425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_officer_W.png
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 311
+        width: 33
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef6699a7195dd9409ee8e93f7c8d31d
+      internalID: 508943167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_dark_E.png
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 1443
+        width: 858
+        height: 605
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26be688252300b940ad1107a9be72e2e
+      internalID: -1884097554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_dark_N.png
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 27
+        width: 304
+        height: 695
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45c8afe33843ab4288f394ff0c39fbd
+      internalID: -2058768606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_dark_S.png
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1062
+        width: 304
+        height: 986
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04553b84cd287484c90cc35c67ea92f5
+      internalID: -241434938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_dark_SE.png
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 632
+        width: 716
+        height: 811
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465facd26dfa06945bb7eead46d48ec9
+      internalID: 955013447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_dark_W.png
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 1443
+        width: 858
+        height: 605
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545900276a34e204787d7ca796c54edc
+      internalID: 1322051109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_light_S.png
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 304
+        height: 986
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7ec4b999ddbca44a9f7eca47d36882
+      internalID: -1965246510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_light_SE.png
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 632
+        width: 716
+        height: 811
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d210272b94d6d5438c64c1ff6539dc3
+      internalID: 882452770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_wreck_S.png
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 722
+        width: 304
+        height: 721
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267862ffbba9a61478293de879fd6262
+      internalID: -1666496683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_wreck_SW.png
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 12
+        width: 711
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cf8363713ec18479dae924c09269fb
+      internalID: 991667255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_NE.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1648
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef86d7b4e3d1e14f9b66e98cb9c0eda
+      internalID: -1978384109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_NW.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1604
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa7f9d23e61eb842aac4d702bd08598
+      internalID: 225338639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_scimitar_NE.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1742
+        width: 18
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a188ec49b39c84c81ff1c38509e9b7
+      internalID: 1248814408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_scimitar_NW.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1692
+        width: 18
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ad69cc2b4772846a2caa04fea6476f
+      internalID: 1225413795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_scimitar_SE.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1792
+        width: 18
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f7d3bb30d91ee4db6e8df51dac306e
+      internalID: 1807537194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_scimitar_SW.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1856
+        width: 19
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bc03160aeacff4fb4a32b8cd630fb6
+      internalID: 1886363813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_SE.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1560
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1a539a17e6c9c46a166dc4a27f36f8
+      internalID: 509867012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_SW.png
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1516
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b80aec5a8132e4fa526556f5707153
+      internalID: -1116435418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tower_SW.png
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 125
+        width: 358
+        height: 507
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ff90db2a69444488b66fd41e074568
+      internalID: -507422808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9deac2c676b382243b1ee4d8dc1e6f4e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boat_large_E.png: 1795422150
+      boat_large_NE.png: -1510909409
+      boat_large_NW.png: 1513160101
+      boat_large_SW.png: -1782321261
+      boat_large_W.png: 79823892
+      boat_small_NE.png: -790379310
+      boat_small_NW.png: 632691197
+      boat_small_S.png: 2118430028
+      bottleLarge_NE.png: -202559518
+      bottleLarge_NW.png: 1074248166
+      bottleLarge_SE.png: -1253583977
+      bottleLarge_SW.png: -921426334
+      bottle_NE.png: -1480499803
+      bottle_NW.png: -1711221027
+      bottle_SE.png: -561369026
+      bottle_SW.png: -1418186912
+      cannonBall_NE.png: -1046671235
+      cannonBall_NW.png: 226778378
+      cannonBall_SE.png: 1539827652
+      cannonBall_SW.png: -392161519
+      cannonLarge_NE.png: -310297264
+      cannonLarge_SW.png: -545498222
+      cannonMobile_SE.png: 652075768
+      cannon_NE.png: -790686957
+      cannon_NW.png: -1502021512
+      formationLarge_rock_NW.png: -1763170429
+      formationLarge_stone_SW.png: -830591313
+      hole_NW.png: 1929994141
+      hole_SW.png: 1038116773
+      pirate_captain_E.png: 884064617
+      pirate_captain_W.png: -734078510
+      pirate_officer_E.png: -1668359425
+      pirate_officer_W.png: 508943167
+      ship_dark_E.png: -1884097554
+      ship_dark_N.png: -2058768606
+      ship_dark_S.png: -241434938
+      ship_dark_SE.png: 955013447
+      ship_dark_W.png: 1322051109
+      ship_light_S.png: -1965246510
+      ship_light_SE.png: 882452770
+      ship_wreck_S.png: -1666496683
+      ship_wreck_SW.png: 991667255
+      sword_NE.png: -1978384109
+      sword_NW.png: 225338639
+      sword_SE.png: 509867012
+      sword_SW.png: -1116435418
+      sword_scimitar_NE.png: 1248814408
+      sword_scimitar_NW.png: 1225413795
+      sword_scimitar_SE.png: 1807537194
+      sword_scimitar_SW.png: 1886363813
+      tower_SW.png: -507422808
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
